@@ -1,11 +1,13 @@
 <template>
   <div>
     <h2>Films</h2>
+    <button @click="addNewSelection">Add New Selection</button>
     <Filters
       v-for="(selection, i) in filmSelections"
       :key="i"
       :film-selection="selection"
       :selection-id="i"
+      @removeSelection="deleteFromArray(filmSelections)"
     />
     <Chart />
     <List />
@@ -109,7 +111,28 @@ export default {
       filmSelections: []
     };
   },
+  methods: {
+    // adds a new object to the existing film selections array
+    addNewSelection: function() {
+      this.filmSelections.push({
+        currentFilms: this.films,
+        selectedFilters: [],
+        oldCoords: [],
+        newCoords: []
+      });
+    },
+    // removes item with passed index from passed array
+    deleteFromArray: function(data, index) {
+      data.splice(index, 1);
+    },
+    // use this to log custom events
+    logEvent: function(value) {
+      // eslint-disable-next-line
+      console.log(value);
+    }
+  },
   mounted: function() {
+    // creates first unfiltered film selection when component is mounted
     this.filmSelections = [
       {
         currentFilms: this.films,
