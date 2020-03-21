@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Films List</p>
+    <p>List</p>
   </div>
 </template>
 
