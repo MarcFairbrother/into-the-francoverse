@@ -125,7 +125,7 @@ export default {
     deleteFromArray: function(data, index) {
       data.splice(index, 1);
     },
-    // use this to log custom events
+    // use this to log custom events during development
     logEvent: function(value) {
       // eslint-disable-next-line
       console.log(value);
