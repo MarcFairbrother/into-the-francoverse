@@ -1,8 +1,12 @@
 <template>
   <div>
     <h2>Films</h2>
-    <p>{{ filmSelections }}</p>
-    <Filters />
+    <Filters
+      v-for="(selection, i) in filmSelections"
+      :key="i"
+      :film-selection="selection"
+      :selection-id="i"
+    />
     <Chart />
     <List />
   </div>
