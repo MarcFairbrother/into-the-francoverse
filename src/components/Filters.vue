@@ -23,11 +23,20 @@
         {{ i }} ({{ value }})
       </option>
     </select>
+    <ul>
+      <li v-for="(label, i) in filmSelection.selectedFilters" :key="i">
+        <button
+          :data-item="i"
+          :value="i"
+          :data-selectionId="selectionId"
+          @click="removeFilter($event)"
+        >
+          {{ label }}
+        </button>
+      </li>
+    </ul>
     <p>Films: {{ filmSelection.currentFilms }}</p>
-    <p>Selected Filters: {{ filmSelection.selectedFilters }}</p>
-    <p>Cast: {{ filmSelection.cast }}</p>
     <p>Selected Cast: {{ filmSelection.selectedCast }}</p>
-    <p>Genres: {{ filmSelection.genres }}</p>
     <p>Selected Genres: {{ filmSelection.selectedGenres }}</p>
   </div>
 </template>
@@ -50,6 +59,10 @@ export default {
         filterValue: e.target.value
       });
       this.resetSelect(e.target);
+    },
+    // fires a custom event when a filter option is removed
+    removeFilter(e) {
+      this.$emit("removeFilter", e);
     },
     // resets a select element to the first option
     resetSelect: function(select) {

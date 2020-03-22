@@ -9,6 +9,9 @@
       :selection-id="i"
       @removeSelection="deleteFromArray(filmSelections, $event)"
       @selectFilter="filterSelection"
+      @removeFilter="
+        filterRemove($event.target.dataset.selectionid, $event.target.value)
+      "
     />
     <Chart />
     <List />
@@ -120,21 +123,21 @@ export default {
           selection.selectedFilters,
           selection.currentFilms
         );
+        const selectedCast = this.referenceArray(
+          selection.selectedFilters,
+          "cast"
+        );
+        const selectedGenres = this.referenceArray(
+          selection.selectedFilters,
+          "genres"
+        );
         const newSelection = {
           currentFilms: filteredFilms,
           selectedFilters: selection.selectedFilters,
-          cast: this.getValuesCount(
-            filteredFilms,
-            selection.selectedCast,
-            "cast"
-          ),
-          selectedCast: selection.selectedCast,
-          genres: this.getValuesCount(
-            filteredFilms,
-            selection.selectedGenres,
-            "genres"
-          ),
-          selectedGenres: selection.selectedGenres
+          cast: this.getValuesCount(filteredFilms, selectedCast, "cast"),
+          selectedCast: selectedCast,
+          genres: this.getValuesCount(filteredFilms, selectedGenres, "genres"),
+          selectedGenres: selectedGenres
         };
         data.push(newSelection);
       });
@@ -146,9 +149,7 @@ export default {
     addNewSelection: function() {
       this.filmSelections.push({
         currentFilms: this.films,
-        selectedFilters: [],
-        selectedCast: [],
-        selectedGenres: []
+        selectedFilters: []
       });
     },
     // creates an object listing all values and number of occurences in an array field of a film object
@@ -178,10 +179,13 @@ export default {
     // updates selected filters on selectFilter custom event
     filterSelection: function(e) {
       const data = this.filmSelections[e.index];
-      data[e.filterType].push(e.filterValue);
       data.selectedFilters.push({
         [e.filterName]: e.filterValue
       });
+    },
+    // handles removing option from active filters
+    filterRemove: function(index, data) {
+      this.deleteFromArray(this.filmSelections[index].selectedFilters, data);
     },
     // returns an array of films matching an array of filters
     getFilteredFilms: function(selectedFilters, data) {
@@ -201,6 +205,18 @@ export default {
     filterBy: function(data, field, name) {
       return data.filter(item => item[field].includes(name));
     },
+    // builds a refence array containing all values from an array of objects
+    referenceArray: function(data, type) {
+      const result = [];
+      data.forEach(item => {
+        for (const i in item) {
+          if (i === type) {
+            result.push(item[i]);
+          }
+        }
+      });
+      return result;
+    },
     // use this to log custom events during development
     logEvent: function(value) {
       // eslint-disable-next-line
@@ -212,9 +228,7 @@ export default {
     this.filmSelections = [
       {
         currentFilms: this.films,
-        selectedFilters: [],
-        selectedCast: [],
-        selectedGenres: []
+        selectedFilters: []
       }
     ];
   }
