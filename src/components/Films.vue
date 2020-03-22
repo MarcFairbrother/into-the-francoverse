@@ -33,79 +33,79 @@ export default {
           title: "L'horrible Docteur Orlof",
           year: 1962,
           cast: ["Diana Loris", "Howard Vernon"],
-          genre: ["pulp", "horror"]
+          genres: ["pulp", "horror"]
         },
         {
           title: "Le sadique Baron Von Klaus",
           year: 1962,
           cast: ["Howard Vernon", "Paula Martel"],
-          genre: ["pulp", "horror"]
+          genres: ["pulp", "horror"]
         },
         {
           title: "Certains l'aiment noire",
           year: 1962,
           cast: ["Antonio Ozores", "Lina Morgan"],
-          genre: ["pulp", "detective"]
+          genres: ["pulp", "detective"]
         },
         {
           title: "Le Jaguar",
           year: 1963,
           cast: ["Sylvia Sorrente", "Todd Martin"],
-          genre: ["pulp"]
+          genres: ["pulp"]
         },
         {
           title: "Chasse à la mafia",
           year: 1963,
           cast: ["Jean Servais", "Laura Granados"],
-          genre: ["pulp", "detective"]
+          genres: ["pulp", "detective"]
         },
         {
           title: "Cartes sur table",
           year: 1966,
           cast: ["Eddie Constantine", "Françoise Brion", "Fernando Rey"],
-          genre: ["pulp", "detective"]
+          genres: ["pulp", "detective"]
         },
         {
           title: "Dans les griffes du maniaque",
           year: 1966,
           cast: ["Estella Blain", "Mabel Karr", "Howard Vernon"],
-          genre: ["pulp", "horror"]
+          genres: ["pulp", "horror"]
         },
         {
           title: "Opération Re Mida",
           year: 1967,
           cast: ["Ray Danton", "Barbara Bold", "Dante Posani"],
-          genre: ["pulp"]
+          genres: ["pulp"]
         },
         {
           title: "Les Yeux verts du diable",
           year: 1968,
           cast: ["Janine Reynaud", "Jack Taylor", "Adrian Hoven"],
-          genre: ["pulp"]
+          genres: ["pulp"]
         },
         {
           title: "Le Sang de Fu Manchu",
           year: 1968,
           cast: ["Christopher Lee", "Richard Greene", "Maria Rohm"],
-          genre: ["pulp"]
+          genres: ["pulp"]
         },
         {
           title: "Les Infortunes de la vertu",
           year: 1969,
           cast: ["Klaus Kinski", "Romina Power", "Maria Rohm"],
-          genre: ["erotica"]
+          genres: ["erotica"]
         },
         {
           title: "Les Inassouvies",
           year: 1970,
           cast: ["Maria Rohm", "Marie Liljedahl", "Christopher Lee"],
-          genre: ["erotica", "psychedelic"]
+          genres: ["erotica", "psychedelic"]
         },
         {
           title: "Le Trône de feu",
           year: 1970,
           cast: ["Christopher Lee", "Maria Schell", "Howard Vernon"],
-          genre: ["horror", "period"]
+          genres: ["horror", "period"]
         }
       ],
       filmSelections: []
@@ -117,9 +117,31 @@ export default {
       this.filmSelections.push({
         currentFilms: this.films,
         selectedFilters: [],
-        oldCoords: [],
-        newCoords: []
+        cast: this.getValuesCount(this.films, [], "cast"),
+        selectedCast: [],
+        genres: this.getValuesCount(this.films, [], "genres"),
+        selectedGenres: []
       });
+    },
+    // creates an object listing all values and number of occurences in an array field of a film object
+    getValuesCount: function(data, reference, field) {
+      const values = [];
+      const valuesCount = {};
+      // creates an array containing all the values
+      data.forEach(item => {
+        values.push(...item[field]);
+      });
+      // udpates an object containing the values with the total count
+      values.forEach(item => {
+        if (reference.includes(item)) {
+          return;
+        } else if (valuesCount[item]) {
+          valuesCount[item]++;
+        } else {
+          valuesCount[item] = 1;
+        }
+      });
+      return valuesCount;
     },
     // removes item with passed index from passed array
     deleteFromArray: function(data, index) {
@@ -137,8 +159,10 @@ export default {
       {
         currentFilms: this.films,
         selectedFilters: [],
-        oldCoords: [],
-        newCoords: []
+        cast: this.getValuesCount(this.films, [], "cast"),
+        selectedCast: [],
+        genres: this.getValuesCount(this.films, [], "genres"),
+        selectedGenres: []
       }
     ];
   }
