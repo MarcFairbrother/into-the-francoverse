@@ -3,11 +3,12 @@
     <h2>Films</h2>
     <button @click="addNewSelection">Add New Selection</button>
     <Filters
-      v-for="(selection, i) in filmSelections"
+      v-for="(selection, i) in reactiveSelections"
       :key="i"
       :film-selection="selection"
       :selection-id="i"
-      @removeSelection="deleteFromArray(filmSelections)"
+      @removeSelection="deleteFromArray(filmSelections, $event)"
+      @selectFilter="filterSelection"
     />
     <Chart />
     <List />
@@ -111,15 +112,42 @@ export default {
       filmSelections: []
     };
   },
+  computed: {
+    reactiveSelections: function() {
+      const data = [];
+      this.filmSelections.forEach(selection => {
+        const filteredFilms = this.getFilteredFilms(
+          selection.selectedFilters,
+          selection.currentFilms
+        );
+        const newSelection = {
+          currentFilms: filteredFilms,
+          selectedFilters: selection.selectedFilters,
+          cast: this.getValuesCount(
+            filteredFilms,
+            selection.selectedCast,
+            "cast"
+          ),
+          selectedCast: selection.selectedCast,
+          genres: this.getValuesCount(
+            filteredFilms,
+            selection.selectedGenres,
+            "genres"
+          ),
+          selectedGenres: selection.selectedGenres
+        };
+        data.push(newSelection);
+      });
+      return data;
+    }
+  },
   methods: {
     // adds a new object to the existing film selections array
     addNewSelection: function() {
       this.filmSelections.push({
         currentFilms: this.films,
         selectedFilters: [],
-        cast: this.getValuesCount(this.films, [], "cast"),
         selectedCast: [],
-        genres: this.getValuesCount(this.films, [], "genres"),
         selectedGenres: []
       });
     },
@@ -147,6 +175,32 @@ export default {
     deleteFromArray: function(data, index) {
       data.splice(index, 1);
     },
+    // updates selected filters on selectFilter custom event
+    filterSelection: function(e) {
+      const data = this.filmSelections[e.index];
+      data[e.filterType].push(e.filterValue);
+      data.selectedFilters.push({
+        [e.filterName]: e.filterValue
+      });
+    },
+    // returns an array of films matching an array of filters
+    getFilteredFilms: function(selectedFilters, data) {
+      if (selectedFilters.length === 0) {
+        return data;
+      } else {
+        let updatedFilms = data;
+        selectedFilters.forEach(item => {
+          for (let i in item) {
+            updatedFilms = this.filterBy(updatedFilms, i, item[i]);
+          }
+        });
+        return updatedFilms;
+      }
+    },
+    // filters an array of objects searching the field property for a value matching name
+    filterBy: function(data, field, name) {
+      return data.filter(item => item[field].includes(name));
+    },
     // use this to log custom events during development
     logEvent: function(value) {
       // eslint-disable-next-line
@@ -159,9 +213,7 @@ export default {
       {
         currentFilms: this.films,
         selectedFilters: [],
-        cast: this.getValuesCount(this.films, [], "cast"),
         selectedCast: [],
-        genres: this.getValuesCount(this.films, [], "genres"),
         selectedGenres: []
       }
     ];
