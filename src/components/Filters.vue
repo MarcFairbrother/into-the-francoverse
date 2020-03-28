@@ -23,6 +23,16 @@
         {{ i }} ({{ value }})
       </option>
     </select>
+    <select
+      name="colors"
+      id="colors-select"
+      :data-selectionId="selectionId"
+      @change="selectColor($event)"
+    >
+      <option value="#000">Black</option>
+      <option value="#32a852">Green</option>
+      <option value="#2190a3">Blue</option>
+    </select>
     <ul>
       <li v-for="(label, i) in filmSelection.selectedFilters" :key="i">
         <button
@@ -49,6 +59,10 @@ export default {
     // fires a custom event when user deletes this selection
     removeSelection(index) {
       this.$emit("removeSelection", index);
+    },
+    // fires a custom event when a color is selected
+    selectColor(e) {
+      this.$emit("selectColor", e);
     },
     // fires a custom event when a filter option is selected
     selectFilter(index, filterName, filterType, e) {

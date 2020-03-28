@@ -8,12 +8,13 @@
       :film-selection="selection"
       :selection-id="i"
       @removeSelection="deleteFromArray(filmSelections, $event)"
+      @selectColor="colorSelection"
       @selectFilter="filterSelection"
       @removeFilter="
         filterRemove($event.target.dataset.selectionid, $event.target.value)
       "
     />
-    <Chart />
+    <Chart :film-selection="reactiveSelections" />
     <List />
   </div>
 </template>
@@ -149,7 +150,8 @@ export default {
     addNewSelection: function() {
       this.filmSelections.push({
         currentFilms: this.films,
-        selectedFilters: []
+        selectedFilters: [],
+        color: "#000"
       });
     },
     // creates an object listing all values and number of occurences in an array field of a film object
@@ -175,6 +177,10 @@ export default {
     // removes item with passed index from passed array
     deleteFromArray: function(data, index) {
       data.splice(index, 1);
+    },
+    // updates color on selectColor custom event
+    colorSelection: function(e) {
+      this.filmSelections[e.target.dataset.selectionid].color = e.target.value;
     },
     // updates selected filters on selectFilter custom event
     filterSelection: function(e) {
@@ -228,7 +234,8 @@ export default {
     this.filmSelections = [
       {
         currentFilms: this.films,
-        selectedFilters: []
+        selectedFilters: [],
+        color: "#000"
       }
     ];
   }
