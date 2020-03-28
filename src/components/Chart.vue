@@ -1,12 +1,13 @@
 <template>
   <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
     <g
-      v-for="(set, i) in coordinates"
+      v-for="(path, i) in paths"
       :key="i"
-      style="stroke: #000000; stroke-width: 2;"
+      :style="{ stroke: path.color }"
+      style="stroke-width: 2;"
     >
       <path
-        :d="set.join(' ')"
+        :d="path.coordinates.join(' ')"
         style="stroke-linejoin: round; fill: none;"
       ></path>
     </g>
@@ -18,7 +19,7 @@ export default {
   name: "Chart",
   props: ["filmSelection"],
   computed: {
-    coordinates: function() {
+    paths: function() {
       const data = [];
       this.filmSelection.forEach(selection => {
         const filmsByYear = this.listFilmsByYear(
@@ -26,7 +27,11 @@ export default {
           1975,
           selection.currentFilms
         );
-        data.push(this.getCoordinates(filmsByYear));
+        const item = {
+          color: selection.color,
+          coordinates: this.getCoordinates(filmsByYear)
+        };
+        data.push(item);
       });
       return data;
     }
