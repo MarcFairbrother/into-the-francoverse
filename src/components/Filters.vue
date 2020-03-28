@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h3>Selection {{ selectionId }}</h3>
-    <button @click="removeSelection(selectionId)">Remove Selection</button>
-    <hr />
+    <h3 :style="{ color: filmSelection.color }">Selection {{ selectionId }}</h3>
     <select
       name="cast"
       id="cast-select"
@@ -45,9 +43,8 @@
         </button>
       </li>
     </ul>
-    <p>Films: {{ filmSelection.currentFilms }}</p>
-    <p>Selected Cast: {{ filmSelection.selectedCast }}</p>
-    <p>Selected Genres: {{ filmSelection.selectedGenres }}</p>
+    <button @click="removeSelection(selectionId)">Remove Selection</button>
+    <hr />
   </div>
 </template>
 
