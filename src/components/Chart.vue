@@ -1,35 +1,35 @@
 <template>
   <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
-    <g
+    <FilmsPath
       v-for="(path, i) in paths"
       :key="i"
-      :style="{ stroke: path.color }"
-      style="stroke-width: 2;"
-    >
-      <path
-        :d="path.coordinates.join(' ')"
-        style="stroke-linejoin: round; fill: none;"
-      ></path>
-    </g>
+      :path-class="'animate' + i"
+      :path-color="path.color"
+      :path-current="path.currentCoordinates.join(' ')"
+      :path-new="path.newCoordinates.join(' ')"
+    />
   </svg>
 </template>
 
 <script>
+import FilmsPath from "./FilmsPath";
+
 export default {
   name: "Chart",
-  props: ["filmSelection"],
+  components: { FilmsPath },
+  props: ["filmSelection", "allFilms"],
   computed: {
     paths: function() {
       const data = [];
       this.filmSelection.forEach(selection => {
-        const filmsByYear = this.listFilmsByYear(
-          1960,
-          1975,
-          selection.currentFilms
-        );
         const item = {
           color: selection.color,
-          coordinates: this.getCoordinates(filmsByYear)
+          currentCoordinates: this.getCoordinates(
+            this.listFilmsByYear(1960, 1975, this.allFilms)
+          ),
+          newCoordinates: this.getCoordinates(
+            this.listFilmsByYear(1960, 1975, selection.currentFilms)
+          )
         };
         data.push(item);
       });

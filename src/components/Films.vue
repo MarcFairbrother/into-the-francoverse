@@ -14,7 +14,7 @@
         filterRemove($event.target.dataset.selectionid, $event.target.value)
       "
     />
-    <Chart :film-selection="reactiveSelections" />
+    <Chart :film-selection="reactiveSelections" :all-films="films" />
     <List />
   </div>
 </template>
