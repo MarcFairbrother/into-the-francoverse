@@ -138,7 +138,8 @@ export default {
           cast: this.getValuesCount(filteredFilms, selectedCast, "cast"),
           selectedCast: selectedCast,
           genres: this.getValuesCount(filteredFilms, selectedGenres, "genres"),
-          selectedGenres: selectedGenres
+          selectedGenres: selectedGenres,
+          color: selection.color
         };
         data.push(newSelection);
       });
