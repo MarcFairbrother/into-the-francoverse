@@ -1,5 +1,5 @@
 <template>
-  <g :style="{ stroke: pathColor }" style="stroke-width: 2;">
+  <g :style="{ stroke: colorHex }" style="stroke-width: 2;">
     <path :d="coords" style="stroke-linejoin: round; fill: none;">
       <animate
         attributeName="d"
@@ -22,6 +22,15 @@ export default {
     return {
       coords: this.pathCurrent
     };
+  },
+  computed: {
+    colorHex: function() {
+      let color = "";
+      for (let i in this.pathColor) {
+        color = this.pathColor[i];
+      }
+      return color;
+    }
   },
   watch: {
     pathNew: function() {

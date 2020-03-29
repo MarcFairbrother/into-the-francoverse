@@ -7,6 +7,7 @@
       :key="i"
       :film-selection="selection"
       :selection-id="i"
+      :available-colors="availableColors"
       @removeSelection="deleteFromArray(filmSelections, $event)"
       @selectColor="colorSelection"
       @selectFilter="filterSelection"
@@ -113,7 +114,14 @@ export default {
           genres: ["horror", "period"]
         }
       ],
-      filmSelections: []
+      filmSelections: [],
+      baseColors: [
+        { yellow: "#fcba03" },
+        { blue: "#36a891" },
+        { green: "#169128" },
+        { pink: "#ad18a8" },
+        { red: "#ab0f31" }
+      ]
     };
   },
   computed: {
@@ -132,6 +140,10 @@ export default {
           selection.selectedFilters,
           "genres"
         );
+        const colorChoices = {};
+        for (let i in selection.color) {
+          colorChoices[i] = selection.color[i];
+        }
         const newSelection = {
           currentFilms: filteredFilms,
           selectedFilters: selection.selectedFilters,
@@ -139,9 +151,31 @@ export default {
           selectedCast: selectedCast,
           genres: this.getValuesCount(filteredFilms, selectedGenres, "genres"),
           selectedGenres: selectedGenres,
-          color: selection.color
+          color: selection.color,
+          colorChoices: { ...colorChoices }
         };
         data.push(newSelection);
+      });
+      return data;
+    },
+    shuffledColors: function() {
+      return this.shuffleArray(this.baseColors);
+    },
+    selectedColors: function() {
+      const data = [];
+      this.reactiveSelections.forEach(selection => {
+        data.push(Object.keys(selection.color)[0]);
+      });
+      return data;
+    },
+    availableColors: function() {
+      const data = {};
+      this.shuffledColors.forEach(color => {
+        for (let i in color) {
+          if (!this.selectedColors.includes(i)) {
+            data[i] = color[i];
+          }
+        }
       });
       return data;
     }
@@ -152,7 +186,11 @@ export default {
       this.filmSelections.push({
         currentFilms: this.films,
         selectedFilters: [],
-        color: "#000"
+        color: {
+          [Object.keys(this.availableColors)[0]]: this.availableColors[
+            Object.keys(this.availableColors)[0]
+          ]
+        }
       });
     },
     // creates an object listing all values and number of occurences in an array field of a film object
@@ -181,7 +219,9 @@ export default {
     },
     // updates color on selectColor custom event
     colorSelection: function(e) {
-      this.filmSelections[e.target.dataset.selectionid].color = e.target.value;
+      this.filmSelections[e.target.dataset.selectionid].color = {
+        [e.target.value]: this.availableColors[e.target.value]
+      };
     },
     // updates selected filters on selectFilter custom event
     filterSelection: function(e) {
@@ -224,6 +264,14 @@ export default {
       });
       return result;
     },
+    // reorders array randomly
+    shuffleArray: function(array) {
+      const shuffled = array
+        .map(a => [Math.random(), a])
+        .sort((a, b) => a[0] - b[0])
+        .map(a => a[1]);
+      return shuffled;
+    },
     // use this to log custom events during development
     logEvent: function(value) {
       // eslint-disable-next-line
@@ -236,7 +284,11 @@ export default {
       {
         currentFilms: this.films,
         selectedFilters: [],
-        color: "#000"
+        color: {
+          [Object.keys(this.availableColors)[0]]: this.availableColors[
+            Object.keys(this.availableColors)[0]
+          ]
+        }
       }
     ];
   }

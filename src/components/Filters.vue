@@ -27,9 +27,9 @@
       :data-selectionId="selectionId"
       @change="selectColor($event)"
     >
-      <option value="#000">Black</option>
-      <option value="#32a852">Green</option>
-      <option value="#2190a3">Blue</option>
+      <option v-for="(color, k, i) in colors" :key="i" :value="k">
+        {{ k }}
+      </option>
     </select>
     <ul>
       <li v-for="(label, i) in filmSelection.selectedFilters" :key="i">
@@ -51,7 +51,12 @@
 <script>
 export default {
   name: "Filters",
-  props: ["filmSelection", "selectionId"],
+  props: ["filmSelection", "selectionId", "availableColors"],
+  computed: {
+    colors: function() {
+      return { ...this.filmSelection.colorChoices, ...this.availableColors };
+    }
+  },
   methods: {
     // fires a custom event when user deletes this selection
     removeSelection(index) {
@@ -60,6 +65,7 @@ export default {
     // fires a custom event when a color is selected
     selectColor(e) {
       this.$emit("selectColor", e);
+      this.resetSelect(e.target);
     },
     // fires a custom event when a filter option is selected
     selectFilter(index, filterName, filterType, e) {
