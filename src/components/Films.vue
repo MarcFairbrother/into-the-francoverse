@@ -24,6 +24,7 @@
 import Filters from "./Filters";
 import Chart from "./Chart";
 import List from "./List";
+import Filmography from "../assets/data";
 
 export default {
   name: "Films",
@@ -34,86 +35,7 @@ export default {
   },
   data: function() {
     return {
-      films: [
-        {
-          title: "L'horrible Docteur Orlof",
-          year: 1962,
-          cast: ["Diana Loris", "Howard Vernon"],
-          genres: ["pulp", "horror"]
-        },
-        {
-          title: "Le sadique Baron Von Klaus",
-          year: 1962,
-          cast: ["Howard Vernon", "Paula Martel"],
-          genres: ["pulp", "horror"]
-        },
-        {
-          title: "Certains l'aiment noire",
-          year: 1962,
-          cast: ["Antonio Ozores", "Lina Morgan"],
-          genres: ["pulp", "detective"]
-        },
-        {
-          title: "Le Jaguar",
-          year: 1963,
-          cast: ["Sylvia Sorrente", "Todd Martin"],
-          genres: ["pulp"]
-        },
-        {
-          title: "Chasse à la mafia",
-          year: 1963,
-          cast: ["Jean Servais", "Laura Granados"],
-          genres: ["pulp", "detective"]
-        },
-        {
-          title: "Cartes sur table",
-          year: 1966,
-          cast: ["Eddie Constantine", "Françoise Brion", "Fernando Rey"],
-          genres: ["pulp", "detective"]
-        },
-        {
-          title: "Dans les griffes du maniaque",
-          year: 1966,
-          cast: ["Estella Blain", "Mabel Karr", "Howard Vernon"],
-          genres: ["pulp", "horror"]
-        },
-        {
-          title: "Opération Re Mida",
-          year: 1967,
-          cast: ["Ray Danton", "Barbara Bold", "Dante Posani"],
-          genres: ["pulp"]
-        },
-        {
-          title: "Les Yeux verts du diable",
-          year: 1968,
-          cast: ["Janine Reynaud", "Jack Taylor", "Adrian Hoven"],
-          genres: ["pulp"]
-        },
-        {
-          title: "Le Sang de Fu Manchu",
-          year: 1968,
-          cast: ["Christopher Lee", "Richard Greene", "Maria Rohm"],
-          genres: ["pulp"]
-        },
-        {
-          title: "Les Infortunes de la vertu",
-          year: 1969,
-          cast: ["Klaus Kinski", "Romina Power", "Maria Rohm"],
-          genres: ["erotica"]
-        },
-        {
-          title: "Les Inassouvies",
-          year: 1970,
-          cast: ["Maria Rohm", "Marie Liljedahl", "Christopher Lee"],
-          genres: ["erotica", "psychedelic"]
-        },
-        {
-          title: "Le Trône de feu",
-          year: 1970,
-          cast: ["Christopher Lee", "Maria Schell", "Howard Vernon"],
-          genres: ["horror", "period"]
-        }
-      ],
+      films: Filmography,
       filmSelections: [],
       baseColors: [
         { yellow: "#fcba03" },
