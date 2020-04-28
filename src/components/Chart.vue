@@ -1,5 +1,10 @@
 <template>
-  <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    version="1.1"
+    baseProfile="full"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 560 250"
+  >
     <FilmsPath
       v-for="(path, i) in paths"
       :key="i"
@@ -25,10 +30,10 @@ export default {
         const item = {
           color: selection.color,
           currentCoordinates: this.getCoordinates(
-            this.listFilmsByYear(1960, 1975, this.allFilms)
+            this.listFilmsByYear(1958, 2014, this.allFilms)
           ),
           newCoordinates: this.getCoordinates(
-            this.listFilmsByYear(1960, 1975, selection.currentFilms)
+            this.listFilmsByYear(1958, 2014, selection.currentFilms)
           )
         };
         data.push(item);
@@ -58,12 +63,12 @@ export default {
     // sets an array of coordinates based on an array of films for each year
     getCoordinates: function(data) {
       const coordinates = [];
-      let x = 10;
+      let x = 0;
       for (const property in data) {
-        if (x === 10) {
-          coordinates.push(`M${x},${100 - data[property].length * 10}`);
+        if (x === 0) {
+          coordinates.push(`M${x},${200 - data[property].length * 10}`);
         } else {
-          coordinates.push(`L${x},${100 - data[property].length * 10}`);
+          coordinates.push(`L${x},${200 - data[property].length * 10}`);
         }
         x = x + 10;
       }

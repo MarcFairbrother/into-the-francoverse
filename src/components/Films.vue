@@ -15,7 +15,9 @@
         filterRemove($event.target.dataset.selectionid, $event.target.value)
       "
     />
-    <Chart :film-selection="reactiveSelections" :all-films="films" />
+    <section class="graph">
+      <Chart :film-selection="reactiveSelections" :all-films="films" />
+    </section>
     <List />
   </div>
 </template>
@@ -216,3 +218,12 @@ export default {
   }
 };
 </script>
+
+<style>
+.graph {
+  width: 100%;
+}
+.graph svg {
+  width: 100%;
+}
+</style>
