@@ -60,9 +60,21 @@ export default {
           selection.selectedFilters,
           "cast"
         );
+        const selectedComposers = this.referenceArray(
+          selection.selectedFilters,
+          "composers"
+        );
         const selectedGenres = this.referenceArray(
           selection.selectedFilters,
           "genres"
+        );
+        const selectedProducers = this.referenceArray(
+          selection.selectedFilters,
+          "producers"
+        );
+        const selectedPseudonyms = this.referenceArray(
+          selection.selectedFilters,
+          "pseudonyms"
         );
         const colorChoices = {};
         for (let i in selection.color) {
@@ -73,8 +85,26 @@ export default {
           selectedFilters: selection.selectedFilters,
           cast: this.getValuesCount(filteredFilms, selectedCast, "cast"),
           selectedCast: selectedCast,
+          composers: this.getValuesCount(
+            filteredFilms,
+            selectedComposers,
+            "composers"
+          ),
+          selectedComposers: selectedComposers,
           genres: this.getValuesCount(filteredFilms, selectedGenres, "genres"),
           selectedGenres: selectedGenres,
+          producers: this.getValuesCount(
+            filteredFilms,
+            selectedProducers,
+            "producers"
+          ),
+          selectedProducers: selectedProducers,
+          pseudonyms: this.getValuesCount(
+            filteredFilms,
+            selectedPseudonyms,
+            "pseudonyms"
+          ),
+          selectedPseudonyms: selectedPseudonyms,
           color: selection.color,
           colorChoices: { ...colorChoices }
         };

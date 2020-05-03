@@ -12,12 +12,52 @@
       </option>
     </select>
     <select
+      name="composers"
+      id="composers-select"
+      @change="
+        selectFilter(selectionId, 'composers', 'selectedComposers', $event)
+      "
+    >
+      <option value="">Composers</option>
+      <option v-for="(value, i) in filmSelection.composers" :key="i" :value="i">
+        {{ i }} ({{ value }})
+      </option>
+    </select>
+    <select
       name="genres"
       id="genres-select"
       @change="selectFilter(selectionId, 'genres', 'selectedGenres', $event)"
     >
       <option value="">Genres</option>
       <option v-for="(value, i) in filmSelection.genres" :key="i" :value="i">
+        {{ i }} ({{ value }})
+      </option>
+    </select>
+    <select
+      name="producers"
+      id="producers-select"
+      @change="
+        selectFilter(selectionId, 'producers', 'selectedProducers', $event)
+      "
+    >
+      <option value="">Producers</option>
+      <option v-for="(value, i) in filmSelection.producers" :key="i" :value="i">
+        {{ i }} ({{ value }})
+      </option>
+    </select>
+    <select
+      name="pseudonyms"
+      id="pseudonyms-select"
+      @change="
+        selectFilter(selectionId, 'pseudonyms', 'selectedPseudonyms', $event)
+      "
+    >
+      <option value="">Pseudonyms</option>
+      <option
+        v-for="(value, i) in filmSelection.pseudonyms"
+        :key="i"
+        :value="i"
+      >
         {{ i }} ({{ value }})
       </option>
     </select>
