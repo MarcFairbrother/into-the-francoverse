@@ -26,7 +26,7 @@
 import Filters from "./Filters";
 import Chart from "./Chart";
 import List from "./List";
-import Filmography from "../assets/data";
+import Filmography from "../assets/js/data";
 
 export default {
   name: "Films",
