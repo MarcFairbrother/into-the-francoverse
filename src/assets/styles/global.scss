@@ -1,4 +1,9 @@
-/* Load Fonts */
+/*
+**
+** Load Fonts
+**
+*/
+
 @font-face {
   font-family: 'Special Elite';
   font-style: normal;
@@ -40,4 +45,27 @@
     /* Safari, Android, iOS */
       url('./assets/fonts/changa-one/changa-one-v12-latin-regular.svg#ChangaOne')
       format('svg'); /* Legacy iOS */
+}
+
+/* 
+**
+** Global Styles
+**
+*/
+
+html {
+  --dark-grey: rgb(10, 10, 10);
+  --pulp-red: rgb(200, 35, 15);
+  --pulp-beige: rgb(220, 200, 145);
+}
+body {
+  background: var(--dark-grey);
+  margin: 0;
+}
+h1,
+h2,
+h3,
+p {
+  font-weight: 400;
+  margin: 0;
 }
