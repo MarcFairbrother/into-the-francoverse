@@ -1,6 +1,12 @@
 <template>
-  <div>
-    <h2>Films</h2>
+  <main>
+    <h3>
+      <span>Maniacs &amp; Vampires! Sex &amp; Murder!</span>
+      <br />Charting the weird worlds of Jess Franco!
+    </h3>
+    <section class="graph">
+      <Chart :film-selection="reactiveSelections" :all-films="films" />
+    </section>
     <button @click="addNewSelection">Add New Selection</button>
     <Filters
       v-for="(selection, i) in reactiveSelections"
@@ -15,11 +21,8 @@
         filterRemove($event.target.dataset.selectionid, $event.target.value)
       "
     />
-    <section class="graph">
-      <Chart :film-selection="reactiveSelections" :all-films="films" />
-    </section>
     <List />
-  </div>
+  </main>
 </template>
 
 <script>
@@ -249,11 +252,59 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+main {
+  background: rgb(235, 223, 169);
+  display: grid;
+  grid-template-columns: 1fr 400px 1fr;
+  padding: 15px;
+  @include breakpoint($tablet-width) {
+    grid-template-columns: 1fr 680px 1fr;
+  }
+  @include breakpoint($desktop-width) {
+    grid-template-columns: 1fr 920px 1fr;
+  }
+  @include breakpoint($large-width) {
+    grid-template-columns: 1fr 1020px 1fr;
+  }
+  & > h3 {
+    grid-column: 2;
+    grid-row: 1;
+    color: var(--pulp-red);
+    font-family: "Changa One", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-shadow: -1px -1px 0 var(--dark-grey), 1px -1px 0 var(--dark-grey),
+      -1px 1px 0 var(--dark-grey), 1px 1px 0 var(--dark-grey);
+    @include breakpoint($tablet-width) {
+      font-size: 20px;
+      line-height: 1.25;
+    }
+    & > span {
+      color: var(--pulp-red);
+      font-size: 18px;
+      text-shadow: -1px -1px 0 var(--dark-grey), 1px -1px 0 var(--dark-grey),
+        -1px 1px 0 var(--dark-grey), 1px 1px 0 var(--dark-grey);
+      @include breakpoint($tablet-width) {
+        font-size: 24px;
+      }
+    }
+  }
+}
 .graph {
+  grid-column: 2;
+  grid-row: 2;
   width: 100%;
 }
 .graph svg {
   width: 100%;
+}
+button {
+  grid-column: 2;
+  grid-row: 3;
+}
+div {
+  grid-column: 2;
 }
 </style>
