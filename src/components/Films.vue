@@ -254,7 +254,7 @@ export default {
 
 <style lang="scss">
 main {
-  background: rgb(235, 223, 169);
+  background: rgb(232, 224, 184);
   display: grid;
   grid-template-columns: 1fr 400px 1fr;
   padding: 15px;
