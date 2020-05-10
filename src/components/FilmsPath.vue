@@ -1,5 +1,5 @@
 <template>
-  <g :style="{ stroke: colorHex }" style="stroke-width: 2;">
+  <g :style="{ stroke: colorHex }" style="stroke-width: 1.5;">
     <path :d="coords" style="stroke-linejoin: round; fill: none;">
       <animate
         attributeName="d"

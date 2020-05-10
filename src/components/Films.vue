@@ -43,11 +43,11 @@ export default {
       films: Filmography,
       filmSelections: [],
       baseColors: [
-        { yellow: "#fcba03" },
-        { blue: "#36a891" },
-        { green: "#169128" },
-        { pink: "#ad18a8" },
-        { red: "#ab0f31" }
+        { brown: "rgb(125,75,35)" },
+        { blue: "rgb(25,75,95)" },
+        { green: "rgb(95,125,100)" },
+        { purple: "rgb(95,50,90)" },
+        { red: "rgb(150,30,20)" }
       ]
     };
   },
