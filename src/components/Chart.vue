@@ -4,8 +4,9 @@
     baseProfile="full"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="-5 0 570 240"
+    class="chart"
   >
-    <Grid :all-years="allYears" />
+    <Grid :all-years="allYears" :yearly-count="yearlyCount" />
     <FilmsPath
       v-for="(path, i) in paths"
       :key="i"
@@ -44,6 +45,13 @@ export default {
           )
         };
         data.push(item);
+      });
+      return data;
+    },
+    yearlyCount: function() {
+      const data = [];
+      this.filmSelection.forEach(selection => {
+        data.push(this.listFilmsByYear(1958, 2014, selection.currentFilms));
       });
       return data;
     }
