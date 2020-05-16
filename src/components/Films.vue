@@ -1,15 +1,15 @@
 <template>
   <main>
-    <h3>
-      <span>Maniacs &amp; Vampires! Sex &amp; Murder!</span>
-      <br />Charting the weird worlds of Jess Franco!
-    </h3>
     <section class="graph">
       <div class="chart__labels--y">
         <ChartLabelsY />
       </div>
       <Chart :film-selection="reactiveSelections" :all-films="films" />
     </section>
+    <h3>
+      <span>Maniacs &amp; Vampires! Sex, Lust &amp; Murder!</span>
+      <br />Charting the wonderfully weird worlds of Jess Franco!
+    </h3>
     <button @click="addNewSelection">Add New Selection</button>
     <Filters
       v-for="(selection, i) in reactiveSelections"
@@ -277,22 +277,18 @@ main {
     grid-row: 1;
     color: var(--pulp-red);
     font-family: "Changa One", Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 1px;
     line-height: 1.5;
-    text-shadow: -1px -1px 0 var(--dark-grey), 1px -1px 0 var(--dark-grey),
-      -1px 1px 0 var(--dark-grey), 1px 1px 0 var(--dark-grey);
     @include breakpoint($tablet-width) {
       font-size: 20px;
       line-height: 1.25;
     }
     & > span {
-      color: var(--pulp-red);
+      color: var(--dark-grey);
       font-size: 18px;
-      text-shadow: -1px -1px 0 var(--dark-grey), 1px -1px 0 var(--dark-grey),
-        -1px 1px 0 var(--dark-grey), 1px 1px 0 var(--dark-grey);
       @include breakpoint($tablet-width) {
-        font-size: 24px;
+        font-size: 28px;
       }
     }
   }
