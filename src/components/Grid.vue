@@ -74,7 +74,10 @@ export default {
       pathYear.classList.remove("year__path--active");
       const chartGrid = document.querySelector(".chart__grid");
       [...chartGrid.querySelectorAll(".count__path--active")].forEach(path => {
-        path.remove();
+        path.style.opacity = 0;
+        setTimeout(() => {
+          path.remove();
+        }, 150);
       });
     },
     togglePath: function(label) {
@@ -92,7 +95,7 @@ export default {
 .count__path {
   stroke: rgb(195, 190, 150);
   stroke-width: 1;
-  transition: stroke 0.15s ease-out;
+  transition: all 0.15s ease-out;
   &.count__path--active {
     stroke: rgb(120, 115, 85);
     z-index: 5;
