@@ -5,6 +5,9 @@
       <br />Charting the weird worlds of Jess Franco!
     </h3>
     <section class="graph">
+      <div class="chart__labels--y">
+        <ChartLabelsY />
+      </div>
       <Chart :film-selection="reactiveSelections" :all-films="films" />
     </section>
     <button @click="addNewSelection">Add New Selection</button>
@@ -28,6 +31,7 @@
 <script>
 import Filters from "./Filters";
 import Chart from "./Chart";
+import ChartLabelsY from "./ChartLabelsY";
 import List from "./List";
 import Filmography from "../assets/js/data";
 
@@ -36,6 +40,7 @@ export default {
   components: {
     Filters,
     Chart,
+    ChartLabelsY,
     List
   },
   data: function() {
@@ -295,10 +300,22 @@ main {
 .graph {
   grid-column: 2;
   grid-row: 2;
+  position: relative;
   width: 100%;
-}
-.graph svg {
-  width: 100%;
+  & > .chart {
+    width: 100%;
+    display: block;
+  }
+  & > .chart__labels--y {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    width: 17px;
+    & > svg {
+      height: 100%;
+    }
+  }
 }
 button {
   grid-column: 2;

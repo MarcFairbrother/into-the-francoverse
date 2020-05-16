@@ -3,7 +3,7 @@
     version="1.1"
     baseProfile="full"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="-5 0 570 240"
+    viewBox="-5 0 570 180"
     class="chart"
   >
     <Grid :all-years="allYears" :yearly-count="yearlyCount" />
@@ -81,9 +81,9 @@ export default {
       let x = 0;
       for (const property in data) {
         if (x === 0) {
-          coordinates.push(`M${x},${200 - data[property].length * 10}`);
+          coordinates.push(`M${x},${150 - data[property].length * 10}`);
         } else {
-          coordinates.push(`L${x},${200 - data[property].length * 10}`);
+          coordinates.push(`L${x},${150 - data[property].length * 10}`);
         }
         x = x + 10;
       }

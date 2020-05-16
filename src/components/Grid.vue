@@ -4,38 +4,38 @@
       class="count__path"
       data-count="0"
       style="stroke: rgb(195, 190, 150);"
-      d="M-5,200 L565, 200"
+      d="M-5,150 L565, 150"
     />
-    <path class="count__path" data-count="1" d="M-5,190 L565, 190" />
-    <path class="count__path" data-count="2" d="M-5,180 L565, 180" />
-    <path class="count__path" data-count="3" d="M-5,170 L565, 170" />
-    <path class="count__path" data-count="4" d="M-5,160 L565, 160" />
-    <path class="count__path" data-count="5" d="M-5,150 L565, 150" />
-    <path class="count__path" data-count="6" d="M-5,140 L565, 140" />
-    <path class="count__path" data-count="7" d="M-5,130 L565, 130" />
-    <path class="count__path" data-count="8" d="M-5,120 L565, 120" />
-    <path class="count__path" data-count="9" d="M-5,110 L565, 110" />
-    <path class="count__path" data-count="10" d="M-5,100 L565, 100" />
-    <path class="count__path" data-count="11" d="M-5,90 L565, 90" />
-    <path class="count__path" data-count="12" d="M-5,80 L565, 80" />
-    <path class="count__path" data-count="13" d="M-5,70 L565, 70" />
+    <path class="count__path" data-count="1" d="M-5,140 L565, 140" />
+    <path class="count__path" data-count="2" d="M-5,130 L565, 130" />
+    <path class="count__path" data-count="3" d="M-5,120 L565, 120" />
+    <path class="count__path" data-count="4" d="M-5,110 L565, 110" />
+    <path class="count__path" data-count="5" d="M-5,100 L565, 100" />
+    <path class="count__path" data-count="6" d="M-5,90 L565, 90" />
+    <path class="count__path" data-count="7" d="M-5,80 L565, 80" />
+    <path class="count__path" data-count="8" d="M-5,70 L565, 70" />
+    <path class="count__path" data-count="9" d="M-5,60 L565, 60" />
+    <path class="count__path" data-count="10" d="M-5,50 L565, 50" />
+    <path class="count__path" data-count="11" d="M-5,40 L565, 40" />
+    <path class="count__path" data-count="12" d="M-5,30 L565, 30" />
+    <path class="count__path" data-count="13" d="M-5,20 L565, 20" />
     <path
       v-for="(year, i, n) in allYears"
       :key="i"
       :data-year="i"
       class="year__path"
-      :d="`M${n * 10},205 L${n * 10}, 65`"
+      :d="`M${n * 10},155 L${n * 10}, 15`"
     />
     <text
       v-for="(year, i, n) in allYears"
       :key="n"
       :data-year="i"
-      y="222"
+      y="172"
       :x="n * 10 - 2"
       fill="rgb(10, 10, 10)"
       class="year__label"
       style="font-family: arial; font-size: 6px;"
-      :transform="`rotate(-60, ${n * 10 - 2}, 222)`"
+      :transform="`rotate(-60, ${n * 10 - 2}, 172)`"
     >
       {{ i }}
     </text>
