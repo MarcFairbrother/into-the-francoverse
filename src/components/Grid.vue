@@ -1,5 +1,5 @@
 <template>
-  <g>
+  <g class="chart__grid">
     <path
       class="count__path"
       data-count="0"
@@ -59,10 +59,12 @@ export default {
       );
       pathYear.classList.add("year__path--active");
       this.yearlyCount.forEach(count => {
-        const pathYear = document.querySelector(
-          `path[data-count="${count[e.target.dataset.year].length}"]`
-        );
-        pathYear.classList.add("count__path--active");
+        const pathCount = count[e.target.dataset.year].length;
+        const y = 150 - pathCount * 10;
+        const activePath = `<path class="count__path count__path--active" d="M-5,${y} L565, ${y}" />`;
+        document
+          .querySelector(".chart__grid")
+          .insertAdjacentHTML("beforeend", activePath);
       });
     },
     hidePath: function(e) {
@@ -70,11 +72,9 @@ export default {
         `path[data-year="${e.target.dataset.year}"]`
       );
       pathYear.classList.remove("year__path--active");
-      this.yearlyCount.forEach(count => {
-        const pathYear = document.querySelector(
-          `path[data-count="${count[e.target.dataset.year].length}"]`
-        );
-        pathYear.classList.remove("count__path--active");
+      const chartGrid = document.querySelector(".chart__grid");
+      [...chartGrid.querySelectorAll(".count__path--active")].forEach(path => {
+        path.remove();
       });
     },
     togglePath: function(label) {
