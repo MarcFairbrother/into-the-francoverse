@@ -1,18 +1,31 @@
 <template>
   <main>
+    <h3>
+      <span>Maniacs &amp; Vampires! Sex, Lust &amp; Murder!</span>
+      <br />Charting the wonderfully weird worlds of Jess Franco!
+    </h3>
     <section class="graph">
       <div class="chart__labels--y">
         <ChartLabelsY />
       </div>
       <Chart :film-selection="reactiveSelections" :all-films="films" />
     </section>
-    <h3>
-      <span>Maniacs &amp; Vampires! Sex, Lust &amp; Murder!</span>
-      <br />Charting the wonderfully weird worlds of Jess Franco!
-    </h3>
-    <button @click="addNewSelection">Add New Selection</button>
+    <ul class="film__selections">
+      <FilmSelection
+        v-for="(selection, i) in reactiveSelections"
+        :key="i"
+        :film-selection="selection"
+        :selection-id="i"
+        @removeSelection="deleteFromArray(filmSelections, $event)"
+        @editFilters="toggleEditing($event)"
+      />
+      <li v-show="reactiveSelections.length < 4">
+        <button @click="addNewSelection">Add New Selection</button>
+      </li>
+    </ul>
     <Filters
       v-for="(selection, i) in reactiveSelections"
+      v-show="selection.isEditing"
       :key="i"
       :film-selection="selection"
       :selection-id="i"
@@ -33,6 +46,7 @@ import Filters from "./Filters";
 import Chart from "./Chart";
 import ChartLabelsY from "./ChartLabelsY";
 import List from "./List";
+import FilmSelection from "./FilmSelection";
 import Filmography from "../assets/js/data";
 
 export default {
@@ -41,6 +55,7 @@ export default {
     Filters,
     Chart,
     ChartLabelsY,
+    FilmSelection,
     List
   },
   data: function() {
@@ -114,7 +129,8 @@ export default {
           ),
           selectedPseudonyms: selectedPseudonyms,
           color: selection.color,
-          colorChoices: { ...colorChoices }
+          colorChoices: { ...colorChoices },
+          isEditing: selection.isEditing
         };
         data.push(newSelection);
       });
@@ -152,7 +168,8 @@ export default {
           [Object.keys(this.availableColors)[0]]: this.availableColors[
             Object.keys(this.availableColors)[0]
           ]
-        }
+        },
+        isEditing: false
       });
     },
     // creates an object listing all values and number of occurences in an array field of a film object
@@ -234,6 +251,13 @@ export default {
         .map(a => a[1]);
       return shuffled;
     },
+    // disable editing for all selections and enable for target selection
+    toggleEditing: function(e) {
+      this.filmSelections.forEach(selection => {
+        selection.isEditing = false;
+      });
+      this.filmSelections[e].isEditing = true;
+    },
     // use this to log custom events during development
     logEvent: function(value) {
       // eslint-disable-next-line
@@ -250,9 +274,19 @@ export default {
           [Object.keys(this.availableColors)[0]]: this.availableColors[
             Object.keys(this.availableColors)[0]
           ]
-        }
+        },
+        isEditing: true
       }
     ];
+  },
+  updated: function() {
+    // if none of the selections are being edited set the first selection to being edited
+    if (
+      this.filmSelections.length > 0 &&
+      !this.filmSelections.some(selection => selection.isEditing === true)
+    ) {
+      this.filmSelections[0].isEditing = true;
+    }
   }
 };
 </script>
@@ -292,6 +326,13 @@ main {
       }
     }
   }
+  & .film__selections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column: 2;
+    grid-row: 3;
+    list-style-type: none;
+  }
 }
 .graph {
   grid-column: 2;
@@ -312,10 +353,6 @@ main {
       height: 100%;
     }
   }
-}
-button {
-  grid-column: 2;
-  grid-row: 3;
 }
 div {
   grid-column: 2;

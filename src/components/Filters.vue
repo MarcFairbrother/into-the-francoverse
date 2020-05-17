@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Selection {{ selectionId }}</h3>
+    <h3>Selection {{ selectionId + 1 }}</h3>
     <select
       name="cast"
       id="cast-select"
