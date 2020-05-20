@@ -1945,7 +1945,7 @@ const films = [
     imdb: 'tt0262241'
   },
   {
-    title: 'El asesino llevaba medias negras',
+    title: 'La Chica des los labios rojos',
     year: 1984,
     cast: ['Lina Romay', 'Antonio Mayans', 'José Llamas'],
     genres: ['Comedy', 'Action'],
@@ -1971,7 +1971,7 @@ const films = [
     imdb: 'tt0086931'
   },
   {
-    title: 'El asesino llevaba medias negras',
+    title: 'Voces de muerte',
     year: 1984,
     cast: ['Lina Romay', 'Antonio Mayans', 'José Llamas'],
     genres: ['Thriller'],
