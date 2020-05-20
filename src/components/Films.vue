@@ -37,7 +37,7 @@
         filterRemove($event.target.dataset.selectionid, $event.target.value)
       "
     />
-    <List />
+    <FilmsList :film-selections="reactiveSelections" />
   </main>
 </template>
 
@@ -45,7 +45,7 @@
 import Filters from "./Filters";
 import Chart from "./Chart";
 import ChartLabelsY from "./ChartLabelsY";
-import List from "./List";
+import FilmsList from "./FilmsList";
 import FilmSelection from "./FilmSelection";
 import Filmography from "../assets/js/data";
 
@@ -56,7 +56,7 @@ export default {
     Chart,
     ChartLabelsY,
     FilmSelection,
-    List
+    FilmsList
   },
   data: function() {
     return {
