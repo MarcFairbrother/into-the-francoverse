@@ -2225,19 +2225,6 @@ const films = [
   },
   {
     title: 'Phollastia',
-    year: 1986,
-    cast: ['Lina Romay'],
-    genres: ['Porno'],
-    producers: [],
-    composers: ['Daniel White'],
-    screenplay: [],
-    pseudonyms: [],
-    locations: [],
-    trivia: [],
-    imdb: 'tt0093732'
-  },
-  {
-    title: 'Phollastia',
     year: 1987,
     cast: ['Lina Romay'],
     genres: ['Porno'],
