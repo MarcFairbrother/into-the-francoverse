@@ -354,7 +354,12 @@ main {
     }
   }
 }
-div {
+.films__filters {
   grid-column: 2;
+  grid-row: 4;
+}
+.films__list {
+  grid-column: 2;
+  grid-row: 5;
 }
 </style>
