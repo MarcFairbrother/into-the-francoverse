@@ -18,12 +18,17 @@ export default {
         selection.currentFilms.forEach(film => {
           const matchingTitle = data.find(item => item.title === film.title);
           if (matchingTitle) {
-            film.colors.push(selection.color);
+            matchingTitle.colors.push(selection.color);
             // Add selected filters
           } else {
-            film.colors = [selection.color];
-            data.push(film);
+            const newFilm = {
+              title: film.title,
+              year: film.year,
+              colors: [selection.color],
+              filters: []
+            };
             // Add selected filters
+            data.push(newFilm);
           }
         });
       });
