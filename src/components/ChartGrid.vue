@@ -44,7 +44,7 @@
 
 <script>
 export default {
-  name: "Grid",
+  name: "ChartGrid",
   props: ["allYears", "yearlyCount"],
   mounted: function() {
     const yearLabels = [...document.querySelectorAll(".year__label")];

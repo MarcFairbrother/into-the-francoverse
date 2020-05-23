@@ -90,7 +90,7 @@
 
 <script>
 export default {
-  name: "Filters",
+  name: "SelectionFilters",
   props: ["filmSelection", "selectionId", "availableColors"],
   computed: {
     colors: function() {

@@ -8,17 +8,17 @@
       </h1>
       <h2>An Experiment in Data Visualisation</h2>
     </header>
-    <Films />
+    <FilmsMain />
   </div>
 </template>
 
 <script>
-import Films from "./components/Films";
+import FilmsMain from "./components/FilmsMain";
 
 export default {
   name: "app",
   components: {
-    Films
+    FilmsMain
   }
 };
 </script>

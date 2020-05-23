@@ -5,7 +5,7 @@
     xmlns="http://www.w3.org/2000/svg"
     viewBox="-5 0 570 180"
   >
-    <Grid :all-years="allYears" :yearly-count="yearlyCount" />
+    <ChartGrid :all-years="allYears" :yearly-count="yearlyCount" />
     <FilmsPath
       v-for="(path, i) in paths"
       :key="i"
@@ -19,11 +19,11 @@
 
 <script>
 import FilmsPath from "./FilmsPath";
-import Grid from "./Grid";
+import ChartGrid from "./ChartGrid";
 
 export default {
-  name: "Chart",
-  components: { FilmsPath, Grid },
+  name: "ChartMain",
+  components: { FilmsPath, ChartGrid },
   props: ["filmSelection", "allFilms"],
   data: function() {
     return {

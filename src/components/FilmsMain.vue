@@ -8,14 +8,14 @@
       <div class="labels--y">
         <ChartLabelsY />
       </div>
-      <Chart
+      <ChartMain
         :film-selection="reactiveSelections"
         :all-films="films"
         class="graph"
       />
     </section>
     <ul class="films__selections">
-      <FilmSelection
+      <FilmsSelection
         v-for="(selection, i) in reactiveSelections"
         :key="i"
         :film-selection="selection"
@@ -27,7 +27,7 @@
         <button @click="addNewSelection">Add New Selection</button>
       </li>
     </ul>
-    <Filters
+    <SelectionFilters
       v-for="(selection, i) in reactiveSelections"
       v-show="selection.isEditing"
       :key="i"
@@ -47,20 +47,20 @@
 </template>
 
 <script>
-import Filters from "./Filters";
-import Chart from "./Chart";
-import ChartLabelsY from "./ChartLabelsY";
-import FilmsList from "./FilmsList";
-import FilmSelection from "./FilmSelection";
 import Filmography from "../assets/js/data";
+import ChartMain from "./ChartMain";
+import ChartLabelsY from "./ChartLabelsY";
+import FilmsSelection from "./FilmsSelection";
+import SelectionFilters from "./SelectionFilters";
+import FilmsList from "./FilmsList";
 
 export default {
-  name: "Films",
+  name: "FilmsMain",
   components: {
-    Filters,
-    Chart,
+    ChartMain,
     ChartLabelsY,
-    FilmSelection,
+    FilmsSelection,
+    SelectionFilters,
     FilmsList
   },
   data: function() {

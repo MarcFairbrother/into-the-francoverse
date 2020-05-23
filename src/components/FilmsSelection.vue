@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "FilmSelection",
+  name: "FilmsSelection",
   props: ["filmSelection", "selectionId"],
   methods: {
     // fires a custom event when user deletes this selection
