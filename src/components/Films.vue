@@ -1,16 +1,20 @@
 <template>
-  <main>
-    <h3>
+  <main class="films">
+    <h3 class="films__heading">
       <span>Maniacs &amp; Vampires! Sex, Lust &amp; Murder!</span>
       <br />Charting the wonderfully weird worlds of Jess Franco!
     </h3>
-    <section class="graph">
-      <div class="chart__labels--y">
+    <section class="films__chart">
+      <div class="labels--y">
         <ChartLabelsY />
       </div>
-      <Chart :film-selection="reactiveSelections" :all-films="films" />
+      <Chart
+        :film-selection="reactiveSelections"
+        :all-films="films"
+        class="graph"
+      />
     </section>
-    <ul class="film__selections">
+    <ul class="films__selections">
       <FilmSelection
         v-for="(selection, i) in reactiveSelections"
         :key="i"
@@ -36,8 +40,9 @@
       @removeFilter="
         filterRemove($event.target.dataset.selectionid, $event.target.value)
       "
+      class="films__filters"
     />
-    <FilmsList :film-selections="reactiveSelections" />
+    <FilmsList :film-selections="reactiveSelections" class="films__list" />
   </main>
 </template>
 
@@ -292,7 +297,7 @@ export default {
 </script>
 
 <style lang="scss">
-main {
+.films {
   background: rgb(232, 224, 184);
   display: grid;
   grid-template-columns: 1fr 400px 1fr;
@@ -306,7 +311,7 @@ main {
   @include breakpoint($large-width) {
     grid-template-columns: 1fr 1020px 1fr;
   }
-  & > h3 {
+  &__heading {
     grid-column: 2;
     grid-row: 1;
     color: var(--pulp-red);
@@ -326,40 +331,40 @@ main {
       }
     }
   }
-  & .film__selections {
+  &__chart {
+    grid-column: 2;
+    grid-row: 2;
+    position: relative;
+    width: 100%;
+    & .graph {
+      width: 100%;
+      display: block;
+    }
+    & .labels--y {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 100%;
+      width: 17px;
+      & > svg {
+        height: 100%;
+      }
+    }
+  }
+  &__selections {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column: 2;
     grid-row: 3;
     list-style-type: none;
   }
-}
-.graph {
-  grid-column: 2;
-  grid-row: 2;
-  position: relative;
-  width: 100%;
-  & > .chart {
-    width: 100%;
-    display: block;
+  &__filters {
+    grid-column: 2;
+    grid-row: 4;
   }
-  & > .chart__labels--y {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 100%;
-    width: 17px;
-    & > svg {
-      height: 100%;
-    }
+  &__list {
+    grid-column: 2;
+    grid-row: 5;
   }
-}
-.films__filters {
-  grid-column: 2;
-  grid-row: 4;
-}
-.films__list {
-  grid-column: 2;
-  grid-row: 5;
 }
 </style>

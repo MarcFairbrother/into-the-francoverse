@@ -4,7 +4,6 @@
     baseProfile="full"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="-5 0 570 180"
-    class="chart"
   >
     <Grid :all-years="allYears" :yearly-count="yearlyCount" />
     <FilmsPath

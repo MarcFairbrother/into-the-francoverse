@@ -1,5 +1,5 @@
 <template>
-  <ul class="films__list">
+  <ul>
     <li v-for="(film, i) in selectedFilms" :key="i">
       <h4>{{ film.title }} ({{ film.year }})</h4>
       <p v-for="(color, n) in film.colors" :key="n">{{ color }}</p>

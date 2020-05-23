@@ -1,5 +1,5 @@
 <template>
-  <div class="films__filters">
+  <div>
     <h3>Selection {{ selectionId + 1 }}</h3>
     <select
       name="cast"
