@@ -71,7 +71,10 @@
         {{ k }}
       </option>
     </select>
-    <ul class="filters__selected">
+    <ul
+      class="filters__selected"
+      v-show="filmSelection.selectedFilters.length > 0"
+    >
       <li v-for="(label, i) in filmSelection.selectedFilters" :key="i">
         <button
           :data-item="i"
@@ -86,7 +89,6 @@
     <button class="filters__delete" @click="removeSelection(selectionId)">
       Remove Selection
     </button>
-    <hr />
   </div>
 </template>
 
