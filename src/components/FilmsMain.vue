@@ -353,10 +353,12 @@ export default {
   }
   &__selections {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column: 2;
     grid-row: 3;
-    list-style-type: none;
+    @include breakpoint($tablet-width) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
   &__filters {
     grid-column: 2;
