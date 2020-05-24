@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h3>Selection {{ selectionId + 1 }}</h3>
+  <div class="filters">
+    <h3 class="filters__heading">Selection {{ selectionId + 1 }}</h3>
     <select
       name="cast"
       id="cast-select"
@@ -71,7 +71,7 @@
         {{ k }}
       </option>
     </select>
-    <ul>
+    <ul class="filters__selected">
       <li v-for="(label, i) in filmSelection.selectedFilters" :key="i">
         <button
           :data-item="i"
@@ -83,7 +83,9 @@
         </button>
       </li>
     </ul>
-    <button @click="removeSelection(selectionId)">Remove Selection</button>
+    <button class="filters__delete" @click="removeSelection(selectionId)">
+      Remove Selection
+    </button>
     <hr />
   </div>
 </template>
@@ -128,3 +130,18 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.filters {
+  &__heading,
+  &__selected,
+  &__delete {
+    @include breakpoint($tablet-width) {
+      grid-column: 1/3;
+    }
+    @include breakpoint($desktop-width) {
+      grid-column: 1/4;
+    }
+  }
+}
+</style>
