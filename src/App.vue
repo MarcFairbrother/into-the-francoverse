@@ -72,6 +72,40 @@ export default {
       url("./assets/fonts/changa-one/changa-one-v12-latin-regular.svg#ChangaOne")
       format("svg"); /* Legacy iOS */
 }
+
+/* 
+**
+** Global Styles
+**
+*/
+
+html {
+  --dark-grey: rgb(10, 10, 10);
+  --pulp-red: rgb(200, 35, 15);
+  --pulp-beige: rgb(220, 200, 145);
+}
+html * {
+  box-sizing: border-box;
+  grid-gap: 20px;
+}
+body {
+  background: var(--dark-grey);
+  margin: 0;
+  width: 100%;
+}
+h1,
+h2,
+h3,
+p {
+  font-weight: 400;
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* Site Header */
 header {
   background: url("./assets/img/tear_01.png") top left repeat-x,
