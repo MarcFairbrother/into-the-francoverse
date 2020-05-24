@@ -373,8 +373,16 @@ export default {
     }
   }
   &__list {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-column: 2;
     grid-row: 5;
+    @include breakpoint($tablet-width) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint($desktop-width) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 </style>
