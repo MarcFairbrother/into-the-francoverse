@@ -96,6 +96,7 @@ body {
 h1,
 h2,
 h3,
+h4,
 p {
   font-weight: 400;
   margin: 0;
