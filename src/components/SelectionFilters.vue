@@ -7,7 +7,7 @@
       @change="selectFilter(selectionId, 'cast', 'selectedCast', $event)"
     >
       <option value="">Actresses and Actors</option>
-      <option v-for="(value, i) in filmSelection.cast" :key="i" :value="i">
+      <option v-for="(value, i) in cast" :key="i" :value="i">
         {{ i }} ({{ value }})
       </option>
     </select>
@@ -19,7 +19,7 @@
       "
     >
       <option value="">Composers</option>
-      <option v-for="(value, i) in filmSelection.composers" :key="i" :value="i">
+      <option v-for="(value, i) in composers" :key="i" :value="i">
         {{ i }} ({{ value }})
       </option>
     </select>
@@ -29,7 +29,7 @@
       @change="selectFilter(selectionId, 'genres', 'selectedGenres', $event)"
     >
       <option value="">Genres</option>
-      <option v-for="(value, i) in filmSelection.genres" :key="i" :value="i">
+      <option v-for="(value, i) in genres" :key="i" :value="i">
         {{ i }} ({{ value }})
       </option>
     </select>
@@ -41,7 +41,7 @@
       "
     >
       <option value="">Producers</option>
-      <option v-for="(value, i) in filmSelection.producers" :key="i" :value="i">
+      <option v-for="(value, i) in producers" :key="i" :value="i">
         {{ i }} ({{ value }})
       </option>
     </select>
@@ -53,11 +53,7 @@
       "
     >
       <option value="">Pseudonyms</option>
-      <option
-        v-for="(value, i) in filmSelection.pseudonyms"
-        :key="i"
-        :value="i"
-      >
+      <option v-for="(value, i) in pseudonyms" :key="i" :value="i">
         {{ i }} ({{ value }})
       </option>
     </select>
@@ -99,6 +95,31 @@ export default {
   computed: {
     colors: function() {
       return { ...this.filmSelection.colorChoices, ...this.availableColors };
+    },
+    cast: function() {
+      const data = {};
+      this.sortObjectAlpha(this.filmSelection.cast, data);
+      return data;
+    },
+    composers: function() {
+      const data = {};
+      this.sortObjectAlpha(this.filmSelection.composers, data);
+      return data;
+    },
+    genres: function() {
+      const data = {};
+      this.sortObjectAlpha(this.filmSelection.genres, data);
+      return data;
+    },
+    producers: function() {
+      const data = {};
+      this.sortObjectAlpha(this.filmSelection.producers, data);
+      return data;
+    },
+    pseudonyms: function() {
+      const data = {};
+      this.sortObjectAlpha(this.filmSelection.pseudonyms, data);
+      return data;
     }
   },
   methods: {
@@ -128,6 +149,14 @@ export default {
     // resets a select element to the first option
     resetSelect: function(select) {
       select.selectedIndex = 0;
+    },
+    // returns a new object alphabetically ordered by key from the source object
+    sortObjectAlpha: function(src, target) {
+      Object.keys(src)
+        .sort()
+        .forEach(function(key) {
+          target[key] = src[key];
+        });
     }
   }
 };
