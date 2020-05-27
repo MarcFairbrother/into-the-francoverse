@@ -176,6 +176,7 @@ export default {
         },
         isEditing: false
       });
+      this.toggleEditing(this.filmSelections.length - 1);
     },
     // creates an object listing all values and number of occurences in an array field of a film object
     getValuesCount: function(data, reference, field) {
