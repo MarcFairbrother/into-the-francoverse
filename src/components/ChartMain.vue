@@ -50,7 +50,9 @@ export default {
     yearlyCount: function() {
       const data = [];
       this.filmSelection.forEach(selection => {
-        data.push(this.listFilmsByYear(1958, 2014, selection.currentFilms));
+        if (!selection.isDisabled) {
+          data.push(this.listFilmsByYear(1958, 2014, selection.currentFilms));
+        }
       });
       return data;
     }

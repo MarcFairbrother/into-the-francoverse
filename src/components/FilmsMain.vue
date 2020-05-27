@@ -17,13 +17,14 @@
     <ul class="films__selections">
       <FilmsSelection
         v-for="(selection, i) in reactiveSelections"
+        v-show="!selection.isDisabled"
         :key="i"
         :film-selection="selection"
         :selection-id="i"
-        @removeSelection="deleteFromArray(filmSelections, $event)"
+        @removeSelection="disableSelection(filmSelections, $event)"
         @editFilters="toggleEditing($event)"
       />
-      <li v-show="reactiveSelections.length < 4">
+      <li v-show="activeSelections.length < 4">
         <button @click="addNewSelection">Add New Selection</button>
       </li>
     </ul>
@@ -135,9 +136,16 @@ export default {
           selectedPseudonyms: selectedPseudonyms,
           color: selection.color,
           colorChoices: { ...colorChoices },
-          isEditing: selection.isEditing
+          isEditing: selection.isEditing,
+          isDisabled: selection.isDisabled
         };
         data.push(newSelection);
+      });
+      return data;
+    },
+    activeSelections: function() {
+      const data = this.reactiveSelections.filter(selection => {
+        return !selection.isDisabled;
       });
       return data;
     },
@@ -174,7 +182,8 @@ export default {
             Object.keys(this.availableColors)[0]
           ]
         },
-        isEditing: false
+        isEditing: false,
+        isDisabled: false
       });
       this.toggleEditing(this.filmSelections.length - 1);
     },
@@ -201,6 +210,11 @@ export default {
     // removes item with passed index from passed array
     deleteFromArray: function(data, index) {
       data.splice(index, 1);
+    },
+    // sets the film selection with passed index to disable and removes color
+    disableSelection: function(data, index) {
+      data[index].isDisabled = true;
+      data[index].color = { transparent: "rgba(0,0,0,0)" };
     },
     // updates color on selectColor custom event
     colorSelection: function(e) {
@@ -281,17 +295,25 @@ export default {
             Object.keys(this.availableColors)[0]
           ]
         },
-        isEditing: true
+        isEditing: true,
+        isDisabled: false
       }
     ];
   },
   updated: function() {
     // if none of the selections are being edited set the first selection to being edited
-    if (
-      this.filmSelections.length > 0 &&
-      !this.filmSelections.some(selection => selection.isEditing === true)
-    ) {
-      this.filmSelections[0].isEditing = true;
+    const editedSection = this.filmSelections.find(
+      selection => selection.isEditing
+    );
+    if (this.activeSelections.length > 0 && editedSection.isDisabled) {
+      const target = this.filmSelections.find(
+        selection => !selection.isDisabled
+      );
+      this.toggleEditing(this.filmSelections.indexOf(target));
+    } else if (this.activeSelections.length === 0) {
+      this.filmSelections.forEach(selection => {
+        selection.isEditing = false;
+      });
     }
   }
 };
