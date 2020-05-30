@@ -1,6 +1,7 @@
 const films = [
   {
     title: 'We Are 18',
+    id: 1,
     year: 1959,
     cast: ['Isana Medel'],
     genres: ['Comedy'],
@@ -12,6 +13,7 @@ const films = [
   },
   {
     title: 'Red Lips',
+    id: 2,
     year: 1960,
     cast: ['Isana Medel'],
     genres: ['Comedy', 'Crime', 'Thriller'],
@@ -23,6 +25,7 @@ const films = [
   },
   {
     title: 'The Queen of the Tabarin',
+    id: 3,
     year: 1960,
     cast: ['Mikaela', 'Yves Massard', 'Juan Antonio Riquelme'],
     genres: ['Comedy', 'Drama'],
@@ -34,6 +37,7 @@ const films = [
   },
   {
     title: 'Gold Diggers of 1930',
+    id: 4,
     year: 1960,
     cast: ['Mikaela', 'Yves Massard', 'Juan Antonio Riquelme'],
     genres: ['Comedy', 'Musical'],
@@ -45,6 +49,7 @@ const films = [
   },
   {
     title: 'The Awful Dr. Orlof',
+    id: 5,
     year: 1961,
     cast: [
       'Howard Vernon',
@@ -61,6 +66,7 @@ const films = [
   },
   {
     title: 'Death Whistles a Blues',
+    id: 6,
     year: 1962,
     cast: ['Conrado San Martín', 'Georges Rollin'],
     genres: ['Crime', 'Drama'],
@@ -72,6 +78,7 @@ const films = [
   },
   {
     title: 'The Sadistic Baron Von Klaus',
+    id: 7,
     year: 1962,
     cast: ['Howard Vernon', 'Georges Rollin'],
     genres: ['Horror'],
@@ -83,6 +90,7 @@ const films = [
   },
   {
     title: 'Rififi in the City (Do You Remember Paco?)',
+    id: 8,
     year: 1963,
     cast: ['Jean Servais'],
     genres: ['Crime', 'Thriller', 'Drama'],
@@ -94,6 +102,7 @@ const films = [
   },
   {
     title: 'The Plainsman',
+    id: 9,
     year: 1963,
     cast: ['Sylvia Sorrente', 'Georges Rollin'],
     genres: ['Western'],
@@ -105,6 +114,7 @@ const films = [
   },
   {
     title: "Dr. Orloff's Monster",
+    id: 10,
     year: 1964,
     cast: [],
     genres: ['Horror', 'Mad Scientists'],
@@ -116,6 +126,7 @@ const films = [
   },
   {
     title: 'The Diabolical Dr. Z',
+    id: 11,
     year: 1965,
     cast: ['Howard Vernon'],
     genres: ['Horror', 'Mad Scientists'],
@@ -128,6 +139,7 @@ const films = [
   },
   {
     title: 'Attack of the Robots',
+    id: 12,
     year: 1965,
     cast: ['Eddie Constantine', 'Françoise Brion', 'Fernando Rey'],
     genres: ['Comedy', 'Science Fiction'],
@@ -140,6 +152,7 @@ const films = [
   },
   {
     title: 'Golden Horn',
+    id: 13,
     year: 1966,
     cast: ['Eddie Constantine', 'Diana Lorys'],
     genres: ['Action', 'Adventure', 'Thriller', 'Eurospy'],
@@ -151,6 +164,7 @@ const films = [
   },
   {
     title: 'Lucky the Inscrutable',
+    id: 14,
     year: 1966,
     cast: ['Rosalba Neri', 'Diana Lorys'],
     genres: ['Action', 'Adventure', 'Thriller', 'Eurospy'],
@@ -162,6 +176,7 @@ const films = [
   },
   {
     title: 'Succubus',
+    id: 15,
     year: 1967,
     cast: ['Janine Reynaud', 'Howard Vernon', 'Jack Taylor', 'Michel Lemoine'],
     genres: ['Horror'],
@@ -174,6 +189,7 @@ const films = [
   },
   {
     title: 'Sadisterotica',
+    id: 16,
     year: 1967,
     cast: ['Janine Reynaud', 'Rosanna Yanni', 'Michel Lemoine'],
     genres: ['Comedy', 'Mystery', 'Thriller', 'Eurospy'],
@@ -186,6 +202,7 @@ const films = [
   },
   {
     title: 'Kiss Me Monster',
+    id: 17,
     year: 1967,
     cast: ['Janine Reynaud', 'Rosanna Yanni', 'Michel Lemoine'],
     genres: ['Adventure', 'Mystery', 'Eurospy'],
@@ -198,6 +215,7 @@ const films = [
   },
   {
     title: 'The Blood of Fu Manchu',
+    id: 18,
     year: 1967,
     cast: ['Christopher Lee', 'Maria Röhm'],
     genres: ['Adventure', 'Crime', 'Pulp'],
@@ -211,6 +229,7 @@ const films = [
   },
   {
     title: 'The Girl From Rio',
+    id: 19,
     year: 1968,
     cast: ['Shirley Eaton', 'Maria Röhm', 'George Sanders'],
     genres: ['Action', 'Adventure'],
@@ -224,6 +243,7 @@ const films = [
   },
   {
     title: '99 Women',
+    id: 20,
     year: 1968,
     cast: [
       'Maria Schell',
@@ -244,6 +264,7 @@ const films = [
   },
   {
     title: 'Justine',
+    id: 21,
     year: 1968,
     cast: [
       'Klaus Kinski',
@@ -265,6 +286,7 @@ const films = [
   },
   {
     title: 'The Castle of Fu Manchu',
+    id: 22,
     year: 1968,
     cast: ['Christopher Lee', 'Rosalba Neri'],
     genres: ['Adventure', 'Crime', 'Pulp'],
@@ -278,6 +300,7 @@ const films = [
   },
   {
     title: 'Venus in Furs',
+    id: 23,
     year: 1968,
     cast: ['Klaus Kinski', 'Maria Röhm', 'Paul Müller'],
     genres: ['Horror', 'Erotica', 'Psychedelia'],
@@ -291,6 +314,7 @@ const films = [
   },
   {
     title: 'Eugénie... The Story of her Journey into Perversion',
+    id: 24,
     year: 1969,
     cast: [
       'Maria Röhm',
@@ -310,6 +334,7 @@ const films = [
   },
   {
     title: 'Sex Charade',
+    id: 25,
     year: 1969,
     cast: [
       'Maria Röhm',
@@ -330,6 +355,7 @@ const films = [
   },
   {
     title: 'The Bloody Judge',
+    id: 26,
     year: 1969,
     cast: [
       'Maria Schell',
@@ -349,6 +375,7 @@ const films = [
   },
   {
     title: 'Nightmares Come at Night',
+    id: 27,
     year: 1969,
     cast: ['Soledad Miranda', 'Jack Taylor', 'Paul Müller', 'Diana Lorys'],
     genres: ['Erotica', 'Drama', 'Horror', 'Crime'],
@@ -362,6 +389,7 @@ const films = [
   },
   {
     title: 'Count Dracula',
+    id: 28,
     year: 1969,
     cast: [
       'Soledad Miranda',
@@ -382,6 +410,7 @@ const films = [
   },
   {
     title: 'Eugenie',
+    id: 29,
     year: 1970,
     cast: ['Soledad Miranda', 'Paul Müller', 'Alice Arno'],
     genres: ['Erotica', 'Drama', 'Thriller', 'Sadism'],
@@ -395,6 +424,7 @@ const films = [
   },
   {
     title: 'Vampyros Lesbos',
+    id: 30,
     year: 1970,
     cast: ['Soledad Miranda', 'Paul Müller', 'Ewa Strömberg'],
     genres: ['Erotica', 'Horror', 'Vampire', 'Psychedelia'],
@@ -408,6 +438,7 @@ const films = [
   },
   {
     title: 'She Killed in Ecstasy',
+    id: 31,
     year: 1970,
     cast: [
       'Soledad Miranda',
@@ -427,6 +458,7 @@ const films = [
   },
   {
     title: 'Juliette',
+    id: 32,
     year: 1970,
     cast: ['Soledad Miranda', 'Paul Müller', 'Sadism'],
     genres: ['Erotica', 'Crime'],
@@ -440,6 +472,7 @@ const films = [
   },
   {
     title: 'The Devil Came From Akasava',
+    id: 33,
     year: 1970,
     cast: [
       'Soledad Miranda',
@@ -459,6 +492,7 @@ const films = [
   },
   {
     title: 'X312 - Flight to Hell',
+    id: 34,
     year: 1970,
     cast: ['Paul Müller', 'Howard Vernon', 'Ewa Strömberg'],
     genres: ['Action', 'Crime', 'Drama'],
@@ -472,6 +506,7 @@ const films = [
   },
   {
     title: 'The Deadly Avenger of Soho',
+    id: 35,
     year: 1971,
     cast: ['Horst Tappert'],
     genres: ['Horror', 'Crime', 'Mystery', 'Krimi'],
@@ -485,6 +520,7 @@ const films = [
   },
   {
     title: 'The Vengeance of Dr. Mabuse',
+    id: 36,
     year: 1971,
     cast: ['Jack Taylor', 'Ewa Strömberg'],
     genres: ['Horror', 'Crime', 'Mad Scientist'],
@@ -498,6 +534,7 @@ const films = [
   },
   {
     title: 'Virgins Report',
+    id: 37,
     year: 1971,
     cast: ['Howard Vernon', 'Britt Nichols'],
     genres: ['Comedy', 'Drama', 'Sex Education', 'Erotica', 'Docudrama'],
@@ -511,6 +548,7 @@ const films = [
   },
   {
     title: 'Sexy Darlings',
+    id: 38,
     year: 1971,
     cast: ['Howard Vernon', 'Paul Müller', 'Anne Libert'],
     genres: ['Comedy', 'Adventure'],
@@ -524,6 +562,7 @@ const films = [
   },
   {
     title: 'A Virgin Among the Living Dead',
+    id: 39,
     year: 1971,
     cast: [
       'Howard Vernon',
@@ -543,6 +582,7 @@ const films = [
   },
   {
     title: 'Dracula Prisoner of Frankenstein',
+    id: 40,
     year: 1971,
     cast: ['Howard Vernon', 'Anne Libert', 'Britt Nichols', 'Luis Barboo'],
     genres: ['Horror', 'Vampire'],
@@ -556,6 +596,7 @@ const films = [
   },
   {
     title: "Dracula's Daughter",
+    id: 41,
     year: 1972,
     cast: ['Howard Vernon', 'Anne Libert', 'Britt Nichols'],
     genres: ['Horror', 'Vampire'],
@@ -569,6 +610,7 @@ const films = [
   },
   {
     title: "Devil's Island Lovers",
+    id: 42,
     year: 1972,
     cast: ['Howard Vernon', 'Anne Libert', 'Luis Barboo'],
     genres: ['Women In Prison'],
@@ -582,6 +624,7 @@ const films = [
   },
   {
     title: 'The Erotic Rites of Frankenstein',
+    id: 43,
     year: 1972,
     cast: [
       'Howard Vernon',
@@ -601,6 +644,7 @@ const films = [
   },
   {
     title: 'The Demons',
+    id: 44,
     year: 1972,
     cast: ['Howard Vernon', 'Anne Libert', 'Britt Nicols', 'Luis Barboo'],
     genres: ['Horror', 'Period'],
@@ -614,6 +658,7 @@ const films = [
   },
   {
     title: 'A Fifteen Year Old Captain',
+    id: 45,
     year: 1972,
     cast: ['Howard Vernon', 'William Berger', 'Luis Barboo'],
     genres: ['Adventure'],
@@ -627,6 +672,7 @@ const films = [
   },
   {
     title: 'The Silence of the Tomb',
+    id: 46,
     year: 1972,
     cast: ['Montserrat Prous'],
     genres: ['Horror'],
@@ -640,6 +686,7 @@ const films = [
   },
   {
     title: 'Les Ébranlées',
+    id: 47,
     year: 1972,
     cast: ['Montserrat Prous', 'Anne Libert', 'Howard Vernon', 'Luis Barboo'],
     genres: ['Crime', 'Drama'],
@@ -653,6 +700,7 @@ const films = [
   },
   {
     title: 'Sinner: The Secret Diary of a Nymphomaniac',
+    id: 48,
     year: 1972,
     cast: ['Montserrat Prous', 'Anne Libert', 'Howard Vernon'],
     genres: ['Erotica', 'Drama'],
@@ -666,6 +714,7 @@ const films = [
   },
   {
     title: 'Relax Baby',
+    id: 49,
     year: 1972,
     cast: ['Montserrat Prous', 'Lina Romay'],
     genres: [],
@@ -679,6 +728,7 @@ const films = [
   },
   {
     title: 'The Sinister Eyes of Dr. Orloff',
+    id: 50,
     year: 1972,
     cast: ['Montserrat Prous', 'Lina Romay', 'William Berger'],
     genres: ['Horror', 'Mad Scientist'],
@@ -692,6 +742,7 @@ const films = [
   },
   {
     title: 'How to Seduce a Virgin',
+    id: 51,
     year: 1973,
     cast: ['Alice Arno', 'Lina Romay', 'Howard Vernon'],
     genres: ['Horror', 'Erotica', 'Sadism'],
@@ -705,6 +756,7 @@ const films = [
   },
   {
     title: 'Countess Perverse',
+    id: 52,
     year: 1973,
     cast: ['Alice Arno', 'Lina Romay', 'Howard Vernon'],
     genres: ['Horror', 'Erotica', 'Action', 'Adventure'],
@@ -718,6 +770,7 @@ const films = [
   },
   {
     title: 'The Mystery of the Red Castle',
+    id: 53,
     year: 1973,
     cast: ['Lina Romay', 'Montserrat Prous', 'Luis Barboo'],
     genres: [],
@@ -731,6 +784,7 @@ const films = [
   },
   {
     title: 'The Lustful Amazon',
+    id: 54,
     year: 1973,
     cast: ['Alice Arno', 'Lina Romay', 'Montserrat Prous'],
     genres: ['Adventure'],
@@ -744,6 +798,7 @@ const films = [
   },
   {
     title: 'Les Gloutonnes',
+    id: 55,
     year: 1973,
     cast: [
       'Alice Arno',
@@ -763,6 +818,7 @@ const films = [
   },
   {
     title: 'Al otro lado del espejo/Le Miroir obscène',
+    id: 56,
     year: 1973,
     cast: ['Alice Arno', 'Lina Romay', 'Howard Vernon', 'Pamela Stanford'],
     genres: ['Horror', 'Drama', 'Erotica'],
@@ -776,6 +832,7 @@ const films = [
   },
   {
     title: 'Female Vampire',
+    id: 57,
     year: 1973,
     cast: ['Alice Arno', 'Lina Romay', 'Jack Taylor', 'Luis Barboo'],
     genres: ['Horror', 'Vampire', 'Erotica'],
@@ -789,6 +846,7 @@ const films = [
   },
   {
     title: 'Night of the Skull',
+    id: 58,
     year: 1973,
     cast: ['William Berger', 'Lina Romay', 'Antonio Mayans', 'Luis Barboo'],
     genres: ['Horror', 'Vampire', 'Erotica'],
@@ -802,6 +860,7 @@ const films = [
   },
   {
     title: 'The Hot Nights of Linda',
+    id: 59,
     year: 1973,
     cast: ['Alice Arno', 'Lina Romay', 'Paul Müller'],
     genres: ['Drama', 'Erotica'],
@@ -815,6 +874,7 @@ const films = [
   },
   {
     title: 'Tender and Perverse Emanuelle',
+    id: 60,
     year: 1973,
     cast: ['Alice Arno', 'Lina Romay', 'Jack Taylor', 'Antonio Mayans'],
     genres: ['Drama', 'Erotica', 'Thriller'],
@@ -828,6 +888,7 @@ const films = [
   },
   {
     title: 'Kiss Me Killer',
+    id: 61,
     year: 1973,
     cast: ['Alice Arno', 'Lina Romay', 'Paul Müller', 'Antonio Mayans'],
     genres: ['Thriller'],
@@ -841,6 +902,7 @@ const films = [
   },
   {
     title: 'Exorcism',
+    id: 62,
     year: 1974,
     cast: ['Lina Romay'],
     genres: ['Horror'],
@@ -854,6 +916,7 @@ const films = [
   },
   {
     title: 'Célestine, an All Round Maid',
+    id: 63,
     year: 1974,
     cast: ['Lina Romay', 'Howard Vernon'],
     genres: ['Comedy', 'Erotica'],
@@ -867,6 +930,7 @@ const films = [
   },
   {
     title: 'Lorna... the Exorcist',
+    id: 64,
     year: 1974,
     cast: ['Lina Romay', 'Howard Vernon', 'Pamela Stanford'],
     genres: ['Horror', 'Erotica'],
@@ -880,6 +944,7 @@ const films = [
   },
   {
     title: 'Les Chatouilleuses',
+    id: 65,
     year: 1974,
     cast: ['Lina Romay', 'Pamela Stanford'],
     genres: ['Comedy', 'Erotica', 'Western'],
@@ -893,6 +958,7 @@ const films = [
   },
   {
     title: 'Le Jouisseur',
+    id: 66,
     year: 1974,
     cast: ['Lina Romay', 'Pamela Stanford'],
     genres: ['Comedy', 'Erotica'],
@@ -906,6 +972,7 @@ const films = [
   },
   {
     title: 'Les Grandes Emmerdeuses',
+    id: 67,
     year: 1974,
     cast: ['Lina Romay', 'Pamela Stanford'],
     genres: ['Comedy', 'Action', 'Erotica'],
@@ -919,6 +986,7 @@ const films = [
   },
   {
     title: 'Julietta 69',
+    id: 68,
     year: 1974,
     cast: ['Lina Romay'],
     genres: ['Erotica'],
@@ -932,6 +1000,7 @@ const films = [
   },
   {
     title: 'Midnight Party',
+    id: 69,
     year: 1975,
     cast: ['Lina Romay'],
     genres: ['Drama', 'Comedy', 'Crime', 'Erotica'],
@@ -945,6 +1014,7 @@ const films = [
   },
   {
     title: 'Shining Sex',
+    id: 70,
     year: 1975,
     cast: ['Lina Romay'],
     genres: ['Horror', 'Erotica'],
@@ -958,6 +1028,7 @@ const films = [
   },
   {
     title: 'Razzia sur le plaisir',
+    id: 71,
     year: 1975,
     cast: ['Alice Arno', 'Pamela Stanford'],
     genres: ['Horror', 'Erotica'],
@@ -971,6 +1042,7 @@ const films = [
   },
   {
     title: 'Barbed Wire Dolls',
+    id: 72,
     year: 1975,
     cast: ['Lina Romay', 'Paul Müller'],
     genres: ['Horror', 'Women In Prison', 'Erotica'],
@@ -984,6 +1056,7 @@ const films = [
   },
   {
     title: 'Women Behind Bars',
+    id: 73,
     year: 1975,
     cast: ['Lina Romay'],
     genres: ['Horror', 'Women In Prison', 'Erotica'],
@@ -997,6 +1070,7 @@ const films = [
   },
   {
     title: 'Downtown',
+    id: 74,
     year: 1975,
     cast: ['Lina Romay', 'Paul Müller'],
     genres: ['Crime', 'Comedy'],
@@ -1010,6 +1084,7 @@ const films = [
   },
   {
     title: 'Swedish Nympho Slaves',
+    id: 75,
     year: 1975,
     cast: ['Lina Romay'],
     genres: ['Crime', 'Drama', 'Erotica'],
@@ -1023,6 +1098,7 @@ const films = [
   },
   {
     title: 'Die Marquise Von Sade',
+    id: 76,
     year: 1975,
     cast: ['Lina Romay'],
     genres: ['Crime', 'Drama', 'Erotica'],
@@ -1036,6 +1112,7 @@ const films = [
   },
   {
     title: 'Mandinga',
+    id: 77,
     year: 1975,
     cast: ['Lina Romay', 'William Berger'],
     genres: ['Period', 'Erotica'],
@@ -1049,6 +1126,7 @@ const films = [
   },
   {
     title: "L'Assassin portait des bas noirs",
+    id: 78,
     year: 1975,
     cast: ['Lina Romay'],
     genres: ['Thriller'],
@@ -1062,6 +1140,7 @@ const films = [
   },
   {
     title: 'Girls in the Night Traffic',
+    id: 79,
     year: 1976,
     cast: [],
     genres: ['Erotica', 'Porno'],
@@ -1075,6 +1154,7 @@ const films = [
   },
   {
     title: 'Weisse Haut Auf Schwarzen Schenkeln',
+    id: 80,
     year: 1976,
     cast: [],
     genres: ['Erotica', 'Porno'],
@@ -1088,6 +1168,7 @@ const films = [
   },
   {
     title: 'In 80 Betten Um Die Welt',
+    id: 81,
     year: 1976,
     cast: [],
     genres: ['Erotica', 'Porno'],
@@ -1101,6 +1182,7 @@ const films = [
   },
   {
     title: 'Jack the Ripper',
+    id: 82,
     year: 1976,
     cast: ['Klaus Kinski', 'Lina Romay'],
     genres: ['Horror', 'Thriller'],
@@ -1114,6 +1196,7 @@ const films = [
   },
   {
     title: 'Ilsa the Wicked Women',
+    id: 83,
     year: 1976,
     cast: ['Lina Romay'],
     genres: ['Horror', 'Women In Prison', 'Erotica'],
@@ -1127,6 +1210,7 @@ const films = [
   },
   {
     title: 'Love Letters of a Portuguese Nun',
+    id: 84,
     year: 1976,
     cast: ['William Berger', 'Susan Hemingway'],
     genres: ['Horror', 'Period', 'Drama'],
@@ -1140,6 +1224,7 @@ const films = [
   },
   {
     title: 'Blue Rita',
+    id: 85,
     year: 1977,
     cast: ['Pamela Stanford'],
     genres: ['Erotica', 'Thriller', 'Drama'],
@@ -1156,6 +1241,7 @@ const films = [
   },
   {
     title: 'Satanic Sisters',
+    id: 86,
     year: 1977,
     cast: ['Pamela Stanford', 'Jack Taylor'],
     genres: ['Erotica', 'Thriller'],
@@ -1169,6 +1255,7 @@ const films = [
   },
   {
     title: 'Love Camp',
+    id: 87,
     year: 1977,
     cast: [],
     genres: ['Erotica', 'Women In Prison'],
@@ -1182,6 +1269,7 @@ const films = [
   },
   {
     title: 'Voodoo Passion',
+    id: 88,
     year: 1977,
     cast: ['Jack Taylor'],
     genres: ['Adventure'],
@@ -1195,6 +1283,7 @@ const films = [
   },
   {
     title: 'Wicked Women',
+    id: 89,
     year: 1977,
     cast: ['Lina Romay'],
     genres: ['Thriller'],
@@ -1208,6 +1297,7 @@ const films = [
   },
   {
     title: 'Women in Cellblock 9',
+    id: 90,
     year: 1977,
     cast: ['Howard Vernon'],
     genres: ['Women In Prison'],
@@ -1221,6 +1311,7 @@ const films = [
   },
   {
     title: 'Cocktail spécial',
+    id: 91,
     year: 1978,
     cast: [],
     genres: ['Sadism', 'Porno'],
@@ -1234,6 +1325,7 @@ const films = [
   },
   {
     title: 'Elles font tout',
+    id: 92,
     year: 1978,
     cast: ['Lina Romay', 'Susan Hemingway'],
     genres: ['Porno', 'Comedy'],
@@ -1247,6 +1339,7 @@ const films = [
   },
   {
     title: 'Je brûle de partout',
+    id: 93,
     year: 1978,
     cast: ['Brigitte Lahaie', 'Susan Hemingway'],
     genres: ['Porno', 'Drama'],
@@ -1260,6 +1353,7 @@ const films = [
   },
   {
     title: 'Two Female Spies With Flowered Panties',
+    id: 94,
     year: 1978,
     cast: ['Lina Romay', 'Susan Hemingway'],
     genres: ['Erotica', 'Thriller', 'Eurospy'],
@@ -1273,6 +1367,7 @@ const films = [
   },
   {
     title: 'The Girls of the Copacabana',
+    id: 95,
     year: 1978,
     cast: ['Lina Romay', 'Juan Soler'],
     genres: ['Erotica', 'Comedy'],
@@ -1286,6 +1381,7 @@ const films = [
   },
   {
     title: 'The Sadist of Notre Dame',
+    id: 96,
     year: 1979,
     cast: ['Lina Romay'],
     genres: ['Drama', 'Horror', 'Thriller', 'Crime'],
@@ -1299,6 +1395,7 @@ const films = [
   },
   {
     title: 'Sinfonia Erotica',
+    id: 97,
     year: 1979,
     cast: ['Lina Romay', 'Susan Hemingway'],
     genres: ['Drama', 'Sadism', 'Erotica'],
@@ -1312,6 +1409,7 @@ const films = [
   },
   {
     title: 'El Escarabajo de oro',
+    id: 98,
     year: 1980,
     cast: ['Lina Romay', 'Antonio Mayans'],
     genres: ['Adventure', 'Comedy'],
@@ -1325,6 +1423,7 @@ const films = [
   },
   {
     title: 'The Cannibals',
+    id: 99,
     year: 1980,
     cast: ['Lina Romay', 'Antonio Mayans', 'Pamela Stanford'],
     genres: ['Adventure', 'Horror'],
@@ -1338,6 +1437,7 @@ const films = [
   },
   {
     title: 'El Sexo está loco',
+    id: 100,
     year: 1980,
     cast: ['Lina Romay', 'Antonio Mayans', 'Juan Soler'],
     genres: ['Comedy', 'Erotica', 'Science Fiction'],
@@ -1351,6 +1451,7 @@ const films = [
   },
   {
     title: 'Aberraciones sexuales de una mujer casada',
+    id: 101,
     year: 1980,
     cast: ['Lina Romay', 'Antonio Mayans'],
     genres: ['Drama', 'Erotica'],
@@ -1364,6 +1465,7 @@ const films = [
   },
   {
     title: 'Eugenie (Historia de una perversión)',
+    id: 102,
     year: 1980,
     cast: ['Lina Romay', 'Antonio Mayans', 'Katja Bienert'],
     genres: ['Drama', 'Erotica', 'Sadism'],
@@ -1377,6 +1479,7 @@ const films = [
   },
   {
     title: "Chasseur de l'enfer",
+    id: 103,
     year: 1980,
     cast: ['Antonio Mayans'],
     genres: ['Horror', 'Adventure'],
@@ -1390,6 +1493,7 @@ const films = [
   },
   {
     title: 'Sadomania',
+    id: 104,
     year: 1980,
     cast: ['Antonio Mayans', 'Juan Soler'],
     genres: ['Drama', 'Thriller', 'Women In Prison'],
@@ -1403,6 +1507,7 @@ const films = [
   },
   {
     title: 'Bloody Moon',
+    id: 105,
     year: 1980,
     cast: [],
     genres: ['Horror', 'Thriller'],
@@ -1416,6 +1521,7 @@ const films = [
   },
   {
     title: 'Linda',
+    id: 106,
     year: 1980,
     cast: ['Antonio Mayans', 'Katja Bienert', 'Juan Soler'],
     genres: ['Adventure', 'Drama', 'Erotica'],
@@ -1429,6 +1535,7 @@ const films = [
   },
   {
     title: 'Pick-Up Girls',
+    id: 107,
     year: 1981,
     cast: ['Antonio Mayans', 'Lina Romay', 'Juan Soler'],
     genres: ['Comedy', 'Crime', 'Erotica'],
@@ -1442,6 +1549,7 @@ const films = [
   },
   {
     title: 'Adolescencia',
+    id: 108,
     year: 1981,
     cast: [],
     genres: [],
@@ -1455,6 +1563,7 @@ const films = [
   },
   {
     title: 'Lola 2000',
+    id: 109,
     year: 1981,
     cast: [
       'Lina Romay',
@@ -1473,6 +1582,7 @@ const films = [
   },
   {
     title: 'El Lago de las virgenes',
+    id: 110,
     year: 1981,
     cast: ['Katja Bienert'],
     genres: ['Adventure', 'Erotica'],
@@ -1486,6 +1596,7 @@ const films = [
   },
   {
     title: 'Macumba Sexual',
+    id: 111,
     year: 1981,
     cast: ['Lina Romay', 'Antonio Mayans'],
     genres: ['Horror', 'Erotica'],
@@ -1499,6 +1610,7 @@ const films = [
   },
   {
     title: 'Zombies Lake',
+    id: 112,
     year: 1981,
     cast: ['Howard Vernon', 'Antonio Mayans'],
     genres: ['Horror', 'Zombies'],
@@ -1512,6 +1624,7 @@ const films = [
   },
   {
     title: 'Night of Open Sex',
+    id: 113,
     year: 1981,
     cast: ['Lina Romay', 'Antonio Mayans'],
     genres: ['Erotica', 'Drama', 'Thriller'],
@@ -1525,6 +1638,7 @@ const films = [
   },
   {
     title: 'Oasis of the Zombies',
+    id: 114,
     year: 1981,
     cast: ['Lina Romay', 'Antonio Mayans', 'Juan Soler'],
     genres: ['Horror', 'Zombies'],
@@ -1538,6 +1652,7 @@ const films = [
   },
   {
     title: 'Confesiones íntimas de una exhibicionista',
+    id: 115,
     year: 1981,
     cast: ['Lina Romay', 'Antonio Mayans'],
     genres: ['Drama', 'Erotica'],
@@ -1551,6 +1666,7 @@ const films = [
   },
   {
     title: 'Botas negras, látigo de cuero',
+    id: 116,
     year: 1982,
     cast: ['Lina Romay', 'Antonio Mayans'],
     genres: ['Drama', 'Erotica'],
@@ -1564,6 +1680,7 @@ const films = [
   },
   {
     title: 'El siniestro doctor Orloff',
+    id: 117,
     year: 1982,
     cast: ['Howard Vernon', 'Antonio Mayans', 'Juan Soler'],
     genres: ['Horror'],
@@ -1577,6 +1694,7 @@ const films = [
   },
   {
     title: 'La Casa de las mujeres perdidas',
+    id: 118,
     year: 1982,
     cast: ['Lina Romay', 'Antonio Mayans'],
     genres: ['Drama'],
@@ -1590,6 +1708,7 @@ const films = [
   },
   {
     title: 'The Inconfessable Orgies of Emmanuelle',
+    id: 119,
     year: 1982,
     cast: ['Antonio Mayans'],
     genres: ['Drama', 'Erotica'],
@@ -1603,6 +1722,7 @@ const films = [
   },
   {
     title: 'El Hotel de los ligues',
+    id: 120,
     year: 1982,
     cast: ['Lina Romay', 'Antonio Mayans', 'Juan Soler'],
     genres: ['Comedy', 'Erotica'],
@@ -1616,6 +1736,7 @@ const films = [
   },
   {
     title: 'Mansion of the Living Dead',
+    id: 121,
     year: 1982,
     cast: ['Lina Romay', 'Antonio Mayans'],
     genres: ['Horror', 'Zombies', 'Erotica'],
@@ -1629,6 +1750,7 @@ const films = [
   },
   {
     title: 'La Sombra del judoka contra el doctor Wong',
+    id: 122,
     year: 1982,
     cast: ['Lina Romay', 'José Llamas'],
     genres: ['Action'],
@@ -1642,6 +1764,7 @@ const films = [
   },
   {
     title: 'Cries of Pleasure',
+    id: 123,
     year: 1982,
     cast: ['Lina Romay', 'Antonio Mayans', 'Juan Soler'],
     genres: ['Erotica', 'Drama', 'Thriller', 'Sadism'],
@@ -1655,6 +1778,7 @@ const films = [
   },
   {
     title: 'Los blues de la calle Pop (Aventuras de Felipe Malboro, volumen 8)',
+    id: 124,
     year: 1982,
     cast: ['Lina Romay', 'Antonio Mayans', 'José Llamas'],
     genres: ['Crime', 'Comedy'],
@@ -1668,6 +1792,7 @@ const films = [
   },
   {
     title: 'Furia en el trópico',
+    id: 125,
     year: 1982,
     cast: ['Lina Romay', 'Antonio Mayans'],
     genres: ['Thriller', 'Women In Prison'],
@@ -1681,6 +1806,7 @@ const films = [
   },
   {
     title: 'Revenge in the House of Usher',
+    id: 126,
     year: 1982,
     cast: ['Lina Romay', 'Howard Vernon', 'Antonio Mayans', 'José Llamas'],
     genres: ['Horror'],
@@ -1694,6 +1820,7 @@ const films = [
   },
   {
     title: 'Diamonds of Kilimandjaro',
+    id: 127,
     year: 1982,
     cast: ['Lina Romay', 'Katja Bienert', 'Antonio Mayans'],
     genres: ['Adventure'],
@@ -1707,6 +1834,7 @@ const films = [
   },
   {
     title: 'Lilian (la virgen pervertida)',
+    id: 128,
     year: 1982,
     cast: ['Lina Romay', 'Katja Bienert', 'Antonio Mayans', 'José Llamas'],
     genres: ['Adventure'],
@@ -1720,6 +1848,7 @@ const films = [
   },
   {
     title: 'Night Has a Thousand Desires',
+    id: 129,
     year: 1983,
     cast: ['Lina Romay', 'José Llamas'],
     genres: ['Thriller', 'Erotica'],
@@ -1733,6 +1862,7 @@ const films = [
   },
   {
     title: 'Un Pito para tres',
+    id: 130,
     year: 1983,
     cast: ['Lina Romay', 'Antonio Mayans'],
     genres: ['Porno'],
@@ -1746,6 +1876,7 @@ const films = [
   },
   {
     title: 'The Sexual Story of O',
+    id: 131,
     year: 1983,
     cast: [],
     genres: ['Drama', 'Erotica'],
@@ -1759,6 +1890,7 @@ const films = [
   },
   {
     title: 'Barrio Chino',
+    id: 132,
     year: 1983,
     cast: ['Lina Romay', 'Antonio Mayans', 'José Llamas'],
     genres: ['Drama', 'Erotica'],
@@ -1772,6 +1904,7 @@ const films = [
   },
   {
     title: 'En busca del dragón dorado',
+    id: 133,
     year: 1983,
     cast: [],
     genres: ['Adventure', 'Family'],
@@ -1785,6 +1918,7 @@ const films = [
   },
   {
     title: 'Golden Temple Amazons',
+    id: 134,
     year: 1983,
     cast: ['Antonio Mayans', 'William Berger', 'Lina Romay'],
     genres: ['Adventure'],
@@ -1798,6 +1932,7 @@ const films = [
   },
   {
     title: 'El Abuelo, la condesa y Escarlata la traviesa',
+    id: 135,
     year: 1983,
     cast: ['Lina Romay', 'Antonio Mayans', 'José Llamas', 'Juan Soler'],
     genres: ['Adventure', 'Erotica'],
@@ -1811,6 +1946,7 @@ const films = [
   },
   {
     title: 'Camino Solitario',
+    id: 136,
     year: 1983,
     cast: ['Antonio Mayans', 'José Llamas', 'Lina Romay'],
     genres: ['Crime', 'Thriller'],
@@ -1824,6 +1960,7 @@ const films = [
   },
   {
     title: 'Las Chicas del tanga',
+    id: 137,
     year: 1983,
     cast: ['Antonio Mayans', 'José Llamas', 'Lina Romay', 'Juan Soler'],
     genres: ['Comedy', 'Thriller'],
@@ -1837,6 +1974,7 @@ const films = [
   },
   {
     title: 'Sola ante el terror',
+    id: 138,
     year: 1983,
     cast: ['Antonio Mayans', 'Lina Romay'],
     genres: ['Horror'],
@@ -1850,6 +1988,7 @@ const films = [
   },
   {
     title: 'Sangre en mis zapatos',
+    id: 139,
     year: 1983,
     cast: [
       'Antonio Mayans',
@@ -1869,6 +2008,7 @@ const films = [
   },
   {
     title: 'Una Rajita para dos',
+    id: 140,
     year: 1983,
     cast: ['Antonio Mayans', 'Lina Romay', 'José Llamas'],
     genres: ['Porno'],
@@ -1882,6 +2022,7 @@ const films = [
   },
   {
     title: 'Claire',
+    id: 141,
     year: 1983,
     cast: [
       'Pamela Stanford',
@@ -1900,6 +2041,7 @@ const films = [
   },
   {
     title: '¿Cuánto cobra un espía?',
+    id: 142,
     year: 1984,
     cast: ['Juan Soler', 'Lina Romay', 'Antonio Mayans'],
     genres: ['Action', 'Comedy'],
@@ -1913,6 +2055,7 @@ const films = [
   },
   {
     title: 'Juego sucio en Casablanca',
+    id: 143,
     year: 1984,
     cast: [
       'Juan Soler',
@@ -1933,6 +2076,7 @@ const films = [
   },
   {
     title: 'El asesino llevaba medias negras',
+    id: 144,
     year: 1984,
     cast: ['Lina Romay', 'Antonio Mayans', 'William Berger'],
     genres: [],
@@ -1946,6 +2090,7 @@ const films = [
   },
   {
     title: 'La Chica des los labios rojos',
+    id: 145,
     year: 1984,
     cast: ['Lina Romay', 'Antonio Mayans', 'José Llamas'],
     genres: ['Comedy', 'Action'],
@@ -1959,6 +2104,7 @@ const films = [
   },
   {
     title: 'Bahía blanca',
+    id: 146,
     year: 1984,
     cast: ['Lina Romay', 'Antonio Mayans', 'José Llamas', 'Juan Soler'],
     genres: ['Drama', 'Thriller'],
@@ -1972,6 +2118,7 @@ const films = [
   },
   {
     title: 'Voces de muerte',
+    id: 147,
     year: 1984,
     cast: ['Lina Romay', 'Antonio Mayans', 'José Llamas'],
     genres: ['Thriller'],
@@ -1985,6 +2132,7 @@ const films = [
   },
   {
     title: 'Las últimas de Filipinas',
+    id: 148,
     year: 1984,
     cast: ['Lina Romay', 'José Llamas'],
     genres: ['Adventure'],
@@ -1998,6 +2146,7 @@ const films = [
   },
   {
     title: 'Viaje a Bangkok, ataúd incluido',
+    id: 149,
     year: 1984,
     cast: ['Howard Vernon', 'José Llamas', 'Juan Soler', 'Antonio Mayans'],
     genres: ['Adventure', 'Action'],
@@ -2011,6 +2160,7 @@ const films = [
   },
   {
     title: 'Bangkok, cita con la muerte',
+    id: 150,
     year: 1984,
     cast: ['Lina Romay', 'José Llamas', 'Antonio Mayans'],
     genres: ['Adventure', 'Action'],
@@ -2024,6 +2174,7 @@ const films = [
   },
   {
     title: 'Gentes del rio',
+    id: 151,
     year: 1984,
     cast: [
       'Howard Vernon',
@@ -2043,6 +2194,7 @@ const films = [
   },
   {
     title: 'Una de chinos',
+    id: 152,
     year: 1985,
     cast: ['Lina Romay', 'José Llamas', 'Juan Soler'],
     genres: [],
@@ -2056,6 +2208,7 @@ const films = [
   },
   {
     title: 'La Esclava blanca',
+    id: 153,
     year: 1985,
     cast: ['Lina Romay', 'José Llamas'],
     genres: ['Adventure'],
@@ -2069,6 +2222,7 @@ const films = [
   },
   {
     title: 'La Venganza del rinoceronte blanco',
+    id: 154,
     year: 1985,
     cast: ['Lina Romay', 'José Llamas', 'Antonio Mayans'],
     genres: ['Comedy'],
@@ -2082,6 +2236,7 @@ const films = [
   },
   {
     title: 'El Ojete de Lulú',
+    id: 155,
     year: 1985,
     cast: ['Lina Romay', 'José Llamas'],
     genres: ['Comedy', 'Porno'],
@@ -2095,6 +2250,7 @@ const films = [
   },
   {
     title: 'El Chupete de Lulú',
+    id: 156,
     year: 1985,
     cast: ['Lina Romay', 'José Llamas'],
     genres: ['Comedy', 'Porno'],
@@ -2108,6 +2264,7 @@ const films = [
   },
   {
     title: 'Entre pitos anda el juego',
+    id: 157,
     year: 1985,
     cast: ['Lina Romay', 'José Llamas'],
     genres: ['Comedy', 'Porno'],
@@ -2121,6 +2278,7 @@ const films = [
   },
   {
     title: 'El Mirón y la exhibicionista',
+    id: 158,
     year: 1985,
     cast: ['Lina Romay', 'José Llamas'],
     genres: ['Drama', 'Porno'],
@@ -2134,6 +2292,7 @@ const films = [
   },
   {
     title: 'Las Chuponas',
+    id: 159,
     year: 1985,
     cast: ['Lina Romay', 'José Llamas', 'Antonio Mayans'],
     genres: ['Porno'],
@@ -2147,6 +2306,7 @@ const films = [
   },
   {
     title: 'Para las nenas... leche calentita',
+    id: 160,
     year: 1986,
     cast: ['Lina Romay', 'José Llamas', 'Antonio Mayans'],
     genres: ['Porno', 'Comedy'],
@@ -2160,6 +2320,7 @@ const films = [
   },
   {
     title: 'Esclavas del crimen',
+    id: 161,
     year: 1986,
     cast: ['Lina Romay', 'José Llamas'],
     genres: ['Pulp', 'Thriller'],
@@ -2173,6 +2334,7 @@ const films = [
   },
   {
     title: 'Teleporno',
+    id: 162,
     year: 1986,
     cast: ['Lina Romay'],
     genres: ['Porno', 'Comedy'],
@@ -2186,6 +2348,7 @@ const films = [
   },
   {
     title: 'Bragueta historia',
+    id: 163,
     year: 1986,
     cast: ['Lina Romay', 'José Llamas'],
     genres: ['Porno'],
@@ -2199,6 +2362,7 @@ const films = [
   },
   {
     title: 'Las Tribulaciones de un Buda Bizco',
+    id: 164,
     year: 1986,
     cast: ['Lina Romay', 'Antonio Mayans', 'Howard Vernon'],
     genres: ['Family'],
@@ -2212,6 +2376,7 @@ const films = [
   },
   {
     title: 'S.I.D.A. la peste del siglo veinte',
+    id: 165,
     year: 1986,
     cast: ['Lina Romay', 'Antonio Mayans', 'Juan Soler'],
     genres: [],
@@ -2225,6 +2390,7 @@ const films = [
   },
   {
     title: 'Phollastia',
+    id: 166,
     year: 1987,
     cast: ['Lina Romay'],
     genres: ['Porno'],
@@ -2238,6 +2404,7 @@ const films = [
   },
   {
     title: 'Phalo Crest',
+    id: 167,
     year: 1987,
     cast: ['Lina Romay'],
     genres: ['Porno', 'Comedy'],
@@ -2251,6 +2418,7 @@ const films = [
   },
   {
     title: 'Dark Mission',
+    id: 168,
     year: 1987,
     cast: ['Christopher Lee', 'Antonio Mayans', 'Brigitte Lahaie'],
     genres: ['Adventure', 'Action'],
@@ -2264,6 +2432,7 @@ const films = [
   },
   {
     title: 'Faceless',
+    id: 169,
     year: 1987,
     cast: ['Helmut Berger', 'Lina Romay', 'Howard Vernon', 'Brigitte Lahaie'],
     genres: ['Horror', 'Mad Scientist'],
@@ -2277,6 +2446,7 @@ const films = [
   },
   {
     title: 'Esmeralda Bay',
+    id: 170,
     year: 1988,
     cast: ['Fernando Rey', 'Lina Romay', 'Antonio Mayans'],
     genres: ['Action', 'War'],
@@ -2290,6 +2460,7 @@ const films = [
   },
   {
     title: 'Fall of the Eagles',
+    id: 171,
     year: 1989,
     cast: ['Christopher Lee', 'Antonio Mayans'],
     genres: ['Drama', 'War'],
@@ -2303,6 +2474,7 @@ const films = [
   },
   {
     title: 'Downtown Heat',
+    id: 172,
     year: 1990,
     cast: ['Lina Romay', 'Antonio Mayans'],
     genres: ['Action', 'Thriller'],
@@ -2316,6 +2488,7 @@ const films = [
   },
   {
     title: 'Jungle of Fear',
+    id: 173,
     year: 1993,
     cast: ['Lina Romay', 'Antonio Mayans', 'William Berger'],
     genres: ['Action', 'Adventure'],
@@ -2329,6 +2502,7 @@ const films = [
   },
   {
     title: 'Killer Barbys',
+    id: 174,
     year: 1996,
     cast: [],
     genres: ['Horror'],
@@ -2342,6 +2516,7 @@ const films = [
   },
   {
     title: 'Tender Flesh',
+    id: 175,
     year: 1997,
     cast: ['Lina Romay'],
     genres: ['Horror'],
@@ -2355,6 +2530,7 @@ const films = [
   },
   {
     title: 'Mari-Cookie and the Killer Tarantula in 8 Legs to Love You',
+    id: 176,
     year: 1998,
     cast: ['Lina Romay', 'Linnea Quigley'],
     genres: ['Horror'],
@@ -2368,6 +2544,7 @@ const films = [
   },
   {
     title: 'Lust for Frankenstein',
+    id: 177,
     year: 1998,
     cast: ['Lina Romay'],
     genres: ['Horror', 'Mad Scientist'],
@@ -2381,6 +2558,7 @@ const films = [
   },
   {
     title: "Dr. Wong's Virtual Hell",
+    id: 178,
     year: 1998,
     cast: ['Lina Romay', 'Howard Vernon'],
     genres: ['Horror', 'Pulp', 'Adventure'],
@@ -2394,6 +2572,7 @@ const films = [
   },
   {
     title: 'Vampire Blues',
+    id: 179,
     year: 1998,
     cast: ['Lina Romay'],
     genres: ['Horror', 'Vampires'],
@@ -2407,6 +2586,7 @@ const films = [
   },
   {
     title: 'Red Silk',
+    id: 180,
     year: 1999,
     cast: ['Lina Romay'],
     genres: ['Crime', 'Comedy'],
@@ -2420,6 +2600,7 @@ const films = [
   },
   {
     title: 'Broken Dolls',
+    id: 181,
     year: 1999,
     cast: ['Lina Romay'],
     genres: ['Drama'],
@@ -2433,6 +2614,7 @@ const films = [
   },
   {
     title: 'Blind Target',
+    id: 182,
     year: 2000,
     cast: ['Lina Romay', 'Linnea Quigley'],
     genres: ['Thriller'],
@@ -2446,6 +2628,7 @@ const films = [
   },
   {
     title: 'Helter Skelter',
+    id: 183,
     year: 2000,
     cast: ['Lina Romay'],
     genres: ['Horror'],
@@ -2459,6 +2642,7 @@ const films = [
   },
   {
     title: 'Vampire Junction',
+    id: 184,
     year: 2001,
     cast: ['Lina Romay'],
     genres: ['Horror', 'Western', 'Vampires'],
@@ -2472,6 +2656,7 @@ const films = [
   },
   {
     title: 'Incubus',
+    id: 185,
     year: 2002,
     cast: ['Lina Romay'],
     genres: ['Horror'],
@@ -2485,6 +2670,7 @@ const films = [
   },
   {
     title: 'Killer Barbys vs Dracula',
+    id: 186,
     year: 2002,
     cast: ['Lina Romay', 'Katja Bienert'],
     genres: ['Horror', 'Comedy', 'Musical'],
@@ -2498,6 +2684,7 @@ const films = [
   },
   {
     title: 'Las Flores de la pasión',
+    id: 187,
     year: 2002,
     cast: ['Lina Romay'],
     genres: ['Erotica'],
@@ -2511,6 +2698,7 @@ const films = [
   },
   {
     title: 'Flores de la perversión',
+    id: 188,
     year: 2002,
     cast: ['Lina Romay'],
     genres: ['Erotica'],
@@ -2524,6 +2712,7 @@ const films = [
   },
   {
     title: 'Snakewoman',
+    id: 189,
     year: 2005,
     cast: ['Lina Romay', 'Antonio Mayans'],
     genres: ['Erotica', 'Horror', 'Vampires'],
@@ -2537,6 +2726,7 @@ const films = [
   },
   {
     title: 'La Cripta de las mujeres malditas',
+    id: 190,
     year: 2007,
     cast: [],
     genres: ['Erotica', 'Horror'],
@@ -2550,6 +2740,7 @@ const films = [
   },
   {
     title: 'Paula-Paula',
+    id: 191,
     year: 2009,
     cast: ['Lina Romay'],
     genres: ['Erotica'],
@@ -2563,6 +2754,7 @@ const films = [
   },
   {
     title: 'Al Pereira vs. the Alligator Ladies',
+    id: 192,
     year: 2012,
     cast: ['Antonio Mayans'],
     genres: ['Erotica', 'Comedy', 'Crime'],
@@ -2576,6 +2768,7 @@ const films = [
   },
   {
     title: 'Revenge of the Alligator Ladies',
+    id: 193,
     year: 2013,
     cast: ['Antonio Mayans'],
     genres: ['Erotica', 'Comedy', 'Documentary'],
