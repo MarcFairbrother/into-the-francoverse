@@ -35,6 +35,7 @@ export default {
             // create new film object to add to films list
             const newFilm = {
               title: film.title,
+              id: film.id,
               year: film.year,
               colors: [Object.values(selection.color)[0]],
               filters: []
@@ -46,10 +47,14 @@ export default {
           }
         });
       });
-      return data;
+      // sort the array by film id and return the value
+      return data.sort(function(a, b) {
+        return a.id - b.id;
+      });
     }
   },
   methods: {
+    // creates a new object with a filter's values
     addSelectedFilter: function(data, target) {
       data.selectedFilters.forEach(filter => {
         for (const key in filter) {

@@ -43,7 +43,7 @@
       "
       class="films__filters"
     />
-    <FilmsList :film-selections="reactiveSelections" class="films__list" />
+    <FilmsList :film-selections="activeSelections" class="films__list" />
   </main>
 </template>
 
