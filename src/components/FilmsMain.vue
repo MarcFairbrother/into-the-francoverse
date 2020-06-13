@@ -323,7 +323,7 @@ export default {
 .films {
   background: rgb(232, 224, 184);
   display: grid;
-  grid-template-columns: 1fr 400px 1fr;
+  grid-template-columns: 1fr auto 1fr;
   padding: 15px;
   @include breakpoint($tablet-width) {
     grid-template-columns: 1fr 680px 1fr;
