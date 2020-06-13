@@ -1,0 +1,80 @@
+/*
+**
+** Load Fonts
+**
+*/
+
+/* cabin-regular - latin */
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/cabin/cabin-v14-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Cabin'), local('Cabin-Regular'),
+    url('./assets/fonts/cabin/cabin-v14-latin-regular.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('./assets/fonts/cabin/cabin-v14-latin-regular.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('./assets/fonts/cabin/cabin-v14-latin-regular.woff') format('woff'),
+    /* Modern Browsers */
+      url('./assets/fonts/cabin/cabin-v14-latin-regular.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+      url('./assets/fonts/cabin/cabin-v14-latin-regular.svg#Cabin')
+      format('svg'); /* Legacy iOS */
+}
+/* cabin-600 - latin */
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/cabin/cabin-v14-latin-600.eot'); /* IE9 Compat Modes */
+  src: local('Cabin SemiBold'), local('Cabin-SemiBold'),
+    url('./assets/fonts/cabin/cabin-v14-latin-600.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('./assets/fonts/cabin/cabin-v14-latin-600.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('./assets/fonts/cabin/cabin-v14-latin-600.woff') format('woff'),
+    /* Modern Browsers */ url('./assets/fonts/cabin/cabin-v14-latin-600.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('./assets/fonts/cabin/cabin-v14-latin-600.svg#Cabin') format('svg'); /* Legacy iOS */
+}
+
+/* 
+**
+** CSS Resets
+**
+*/
+
+html * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  font-weight: 400;
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+**
+** Globals
+**
+*/
+
+html {
+  --dark-grey: #0a0a0a;
+  --off-white: #f1f0e9;
+}
