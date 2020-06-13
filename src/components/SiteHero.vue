@@ -58,7 +58,6 @@
         display: inline-block;
         height: calc(2 * var(--base-unit));
         margin-right: calc(2 * var(--base-unit));
-        margin-right: var(--base-unit);
         width: calc(2 * var(--base-unit));
       }
     }

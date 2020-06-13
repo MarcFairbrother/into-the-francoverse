@@ -59,7 +59,6 @@ h2,
 h3,
 h4,
 p {
-  font-weight: 400;
   margin: 0;
 }
 ul {
@@ -77,4 +76,12 @@ ul {
 html {
   --dark-grey: #0a0a0a;
   --off-white: #f1f0e9;
+  --base-unit: 8px;
+}
+body {
+  background: var(--off-white);
+  color: var(--off-white);
+  display: grid;
+  font-family: 'Cabin', Arial, Helvetica, sans-serif;
+  font-weight: 600;
 }
