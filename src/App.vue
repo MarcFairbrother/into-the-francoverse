@@ -1,23 +1,21 @@
 <template>
   <div id="app">
-    <header>
-      <h1>
-        <span class="into">Into the</span>
-        <br />
-        <span class="francoverse">FrancoVerse</span>
-      </h1>
-      <h2>An Experiment in Data Visualisation</h2>
-    </header>
+    <SiteHero />
+    <SiteIntro />
     <FilmsMain />
   </div>
 </template>
 
 <script>
+import SiteHero from "./components/SiteHero";
+import SiteIntro from "./components/SiteIntro";
 import FilmsMain from "./components/FilmsMain";
 
 export default {
   name: "app",
   components: {
+    SiteHero,
+    SiteIntro,
     FilmsMain
   }
 };
