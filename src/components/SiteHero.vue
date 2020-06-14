@@ -59,12 +59,52 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
+  @include breakpoint($tablet-width) {
+    grid-template-columns: 1fr 2fr;
+  }
+  @include breakpoint($desktop-width) {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: max-content auto;
+    height: calc(110 * var(--base-unit));
+    &::before {
+      background: #358a9d;
+      border-radius: 0 25px 0 0;
+      content: "";
+      grid-column: 1;
+      grid-row: 1/3;
+      margin-top: calc(2 * var(--base-unit));
+      transform: translateX(calc(-5 * var(--base-unit)));
+      width: calc(6 * var(--base-unit));
+      @include breakpoint($large-width) {
+        border-radius: 0 45px 0 0;
+        transform: translateX(calc(-4 * var(--base-unit)));
+      }
+    }
+    &::after {
+      background: var(--dark-grey);
+      content: "";
+      grid-column: 2;
+      grid-row: 2;
+    }
+  }
+  @include breakpoint($large-width) {
+    height: calc(112 * var(--base-unit));
+  }
   &__header {
     background: var(--dark-grey);
     color: var(--off-white);
     display: grid;
     grid-template-columns: 1fr;
     grid-column: 1;
+    @include breakpoint($desktop-width) {
+      grid-row: 1/3;
+      margin-left: calc(2 * var(--base-unit));
+      margin-top: calc(2 * var(--base-unit));
+      border-radius: 0 0 0 50px;
+    }
+    @include breakpoint($large-width) {
+      margin-left: calc(4 * var(--base-unit));
+    }
   }
   &__title {
     font-size: 0;
@@ -100,11 +140,22 @@
     grid-column: 2;
     grid-template-columns: 1fr;
     overflow: hidden;
-    & li {
-      grid-column: 1;
+    @include breakpoint($tablet-width) {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+      grid-gap: calc(2 * var(--base-unit));
+      padding: calc(2 * var(--base-unit));
+    }
+    @include breakpoint($desktop-width) {
       grid-row: 1;
-      width: 100vw;
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(6, calc(12 * var(--base-unit)));
+    }
+    & li {
       @include mobile {
+        grid-column: 1;
+        grid-row: 1;
+        width: 100vw;
         transition: opacity 1.75s ease-in-out, transform 3.5s ease-in-out;
         &.fade-in {
           opacity: 1;
@@ -112,6 +163,67 @@
         &.fade-out {
           opacity: 0;
           transform: translateX(-50%);
+        }
+      }
+      @include breakpoint($tablet-width) {
+        &:nth-of-type(5) {
+          grid-column: 1/4;
+          grid-row: 1/5;
+        }
+        &:nth-of-type(4) {
+          grid-column: 4/7;
+          grid-row: 1/4;
+        }
+        &:nth-of-type(3) {
+          grid-column: 3/7;
+          grid-row: 4/6;
+          position: relative;
+          z-index: 5;
+          &::before {
+            background: var(--off-white);
+            bottom: calc(-2 * var(--base-unit));
+            content: "";
+            left: calc(-2 * var(--base-unit));
+            position: absolute;
+            right: calc(-2 * var(--base-unit));
+            top: calc(-2 * var(--base-unit));
+          }
+        }
+        &:nth-of-type(6) {
+          grid-column: 1/4;
+          grid-row: 5/7;
+        }
+        &:nth-of-type(2) {
+          grid-column: 1/4;
+          grid-row: 7/9;
+        }
+        &:nth-of-type(1) {
+          grid-column: 4/7;
+          grid-row: 6/9;
+        }
+      }
+      @include breakpoint($desktop-width) {
+        &:nth-of-type(3) {
+          grid-column: 3/8;
+          grid-row: 3/5;
+        }
+        &:nth-of-type(6) {
+          grid-column: 1/4;
+          grid-row: 5/7;
+        }
+        &:nth-of-type(2) {
+          grid-column: 4/7;
+          grid-row: 5/7;
+        }
+        &:nth-of-type(1) {
+          grid-column: 7/10;
+          grid-row: 1/7;
+        }
+      }
+      @include breakpoint($large-width) {
+        &:nth-of-type(3) {
+          grid-row: 3/5;
+          margin-top: calc(6 * var(--base-unit));
         }
       }
       & > img {
