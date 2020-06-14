@@ -65,7 +65,7 @@
   @include breakpoint($desktop-width) {
     grid-template-columns: 1fr 3fr;
     grid-template-rows: max-content auto;
-    height: calc(110 * var(--base-unit));
+    height: calc(112 * var(--base-unit));
     &::before {
       background: #358a9d;
       border-radius: 0 25px 0 0;
@@ -86,9 +86,6 @@
       grid-column: 2;
       grid-row: 2;
     }
-  }
-  @include breakpoint($large-width) {
-    height: calc(112 * var(--base-unit));
   }
   &__header {
     background: var(--dark-grey);
