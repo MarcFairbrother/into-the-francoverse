@@ -10,7 +10,7 @@ $very-large: 1650px;
 }
 
 @mixin mobile {
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 767px) {
     @content;
   }
 }
