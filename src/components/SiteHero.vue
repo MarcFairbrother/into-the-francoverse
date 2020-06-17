@@ -67,18 +67,13 @@
     grid-template-rows: max-content auto;
     height: calc(112 * var(--base-unit));
     &::before {
-      background: #358a9d;
-      border-radius: 0 25px 0 0;
+      background: var(--vintage-blue);
       content: "";
       grid-column: 1;
       grid-row: 1/3;
+      height: calc(100% + var(--base-unit));
       margin-top: calc(2 * var(--base-unit));
-      transform: translateX(calc(-5 * var(--base-unit)));
-      width: calc(6 * var(--base-unit));
-      @include breakpoint($large-width) {
-        border-radius: 0 45px 0 0;
-        transform: translateX(calc(-4 * var(--base-unit)));
-      }
+      width: 100px;
     }
     &::after {
       background: var(--dark-grey);
@@ -94,13 +89,20 @@
     grid-template-columns: 1fr;
     grid-column: 1;
     @include breakpoint($desktop-width) {
+      border: solid var(--base-unit) var(--off-white);
+      border-right: none;
+      border-top: none;
       grid-row: 1/3;
-      margin-left: calc(2 * var(--base-unit));
+      height: calc(100% - var(--base-unit));
+      margin-left: var(--base-unit);
       margin-top: calc(2 * var(--base-unit));
       border-radius: 0 0 0 50px;
     }
     @include breakpoint($large-width) {
-      margin-left: calc(4 * var(--base-unit));
+      border: solid calc(2 * var(--base-unit)) var(--off-white);
+      border-right: none;
+      border-top: none;
+      height: 100%;
     }
   }
   &__title {
