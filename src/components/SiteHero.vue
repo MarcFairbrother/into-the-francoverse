@@ -12,43 +12,124 @@
     </header>
     <ul class="hero__images">
       <li data-slide="1" class="fade-in">
-        <img
-          src="../assets/img/stills/she_killed_in_ecstasy_soledad_360_640.jpg"
-          alt="Soledad Miranda in She Killed in Ecstasy"
-          class="blue-tint"
-        />
+        <picture class="blue-tint">
+          <source
+            srcset="../assets/img/stills/she_killed_in_ecstasy_soledad_desk.jpg"
+            media="(min-width: 1024px)"
+          />
+          <source
+            srcset="../assets/img/stills/she_killed_in_ecstasy_soledad_tablet.jpg"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="../assets/img/stills/she_killed_in_ecstasy_soledad_mobile.jpg"
+            media="(max-width: 767px)"
+          />
+          <img
+            src="../assets/img/stills/she_killed_in_ecstasy_soledad_mobile.jpg"
+            alt="Soledad Miranda in She Killed in Ecstasy"
+          />
+        </picture>
       </li>
       <li data-slide="2" class="fade-out">
-        <img
-          src="../assets/img/stills/diabolical_dr_z_360_640.jpg"
-          alt="Miss Muerte in The Diabolical Dr Z"
-        />
+        <picture>
+          <source
+            srcset="../assets/img/stills/diabolical_dr_z_desk.jpg"
+            media="(min-width: 1024px)"
+          />
+          <source
+            srcset="../assets/img/stills/diabolical_dr_z_tablet.jpg"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="../assets/img/stills/diabolical_dr_z_mobile.jpg"
+            media="(max-width: 767px)"
+          />
+          <img
+            src="../assets/img/stills/diabolical_dr_z_mobile.jpg"
+            alt="Miss Muerte in The Diabolical Dr Z"
+          />
+        </picture>
       </li>
       <li data-slide="3" class="fade-out">
-        <img
-          src="../assets/img/stills/female_vampire_360_640.jpg"
-          alt="Lina Romay in Female Vampire"
-          class="red-tint"
-        />
+        <picture class="red-tint">
+          <source
+            srcset="../assets/img/stills/female_vampire_desk.jpg"
+            media="(min-width: 1024px)"
+          />
+          <source
+            srcset="../assets/img/stills/female_vampire_tablet.jpg"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="../assets/img/stills/female_vampire_mobile.jpg"
+            media="(max-width: 767px)"
+          />
+          <img
+            src="../assets/img/stills/female_vampire_mobile.jpg"
+            alt="Lina Romay in Female Vampire"
+          />
+        </picture>
       </li>
       <li data-slide="4" class="fade-out">
-        <img
-          src="../assets/img/stills/she_killed_in_ecstasy_360_640.jpg"
-          alt="She Killed in Ecstasy"
-        />
+        <picture>
+          <source
+            srcset="../assets/img/stills/she_killed_in_ecstasy_desk.jpg"
+            media="(min-width: 1024px)"
+          />
+          <source
+            srcset="../assets/img/stills/she_killed_in_ecstasy_tablet.jpg"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="../assets/img/stills/she_killed_in_ecstasy_mobile.jpg"
+            media="(max-width: 767px)"
+          />
+          <img
+            src="../assets/img/stills/she_killed_in_ecstasy_mobile.jpg"
+            alt="She Killed in Ecstasy"
+          />
+        </picture>
       </li>
       <li data-slide="5" class="fade-out">
-        <img
-          src="../assets/img/stills/countesse_perverse_360_640.jpg"
-          alt="Alie Arno in Countesse Perverse"
-          class="purple-tint"
-        />
+        <picture class="purple-tint">
+          <source
+            srcset="../assets/img/stills/countesse_perverse_desk.jpg"
+            media="(min-width: 1024px)"
+          />
+          <source
+            srcset="../assets/img/stills/countesse_perverse_tablet.jpg"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="../assets/img/stills/countesse_perverse_mobile.jpg"
+            media="(max-width: 767px)"
+          />
+          <img
+            src="../assets/img/stills/countesse_perverse_mobile.jpg"
+            alt="Alie Arno in Countesse Perverse"
+          />
+        </picture>
       </li>
       <li data-slide="6" class="fade-out">
-        <img
-          src="../assets/img/stills/sadist_of_notre_dame_360_640.jpg"
-          alt="Jess Franco in The Sadist of Notre Dame"
-        />
+        <picture>
+          <source
+            srcset="../assets/img/stills/sadist_of_notre_dame_desk.jpg"
+            media="(min-width: 1024px)"
+          />
+          <source
+            srcset="../assets/img/stills/sadist_of_notre_dame_tablet.jpg"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="../assets/img/stills/sadist_of_notre_dame_mobile.jpg"
+            media="(max-width: 767px)"
+          />
+          <img
+            src="../assets/img/stills/sadist_of_notre_dame_mobile.jpg"
+            alt="Jess Franco in The Sadist of Notre Dame"
+          />
+        </picture>
       </li>
     </ul>
   </section>
@@ -217,6 +298,7 @@
         &:nth-of-type(3) {
           grid-column: 3/8;
           grid-row: 3/5;
+          margin-top: 6rem;
         }
         &:nth-of-type(6) {
           grid-column: 1/4;
@@ -231,13 +313,8 @@
           grid-row: 1/7;
         }
       }
-      @include breakpoint($large-width) {
-        &:nth-of-type(3) {
-          grid-row: 3/5;
-          margin-top: 6rem;
-        }
-      }
-      & > img {
+      & > picture,
+      & img {
         display: block;
         height: 100%;
         object-fit: cover;
