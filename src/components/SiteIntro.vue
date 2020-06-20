@@ -31,6 +31,7 @@ export default {
   color: var(--dark-grey);
   @include breakpoint($desktop-width) {
     display: grid;
+    grid-row: 2;
     grid-template-columns: repeat(12, 1fr);
     &::before {
       background: var(--dark-grey);
@@ -46,24 +47,24 @@ export default {
       content: "";
       grid-column: 11/13;
       grid-row: 1;
-      margin-bottom: var(--base-unit);
-      transform: translateX(calc(-1 * var(--base-unit)));
-      width: calc(100% + var(--base-unit));
+      margin-bottom: 1rem;
+      transform: translateX(-1rem);
+      width: calc(100% + 1rem);
       @include breakpoint($large-width) {
-        margin-bottom: calc(2 * var(--base-unit));
+        margin-bottom: 2rem;
       }
     }
   }
   &__content {
-    padding: calc(2 * var(--base-unit));
+    padding: 2rem;
     @include breakpoint($desktop-width) {
       background: var(--vintage-blue);
-      border: solid var(--base-unit) var(--off-white);
+      border: solid 1rem var(--off-white);
       border-left: none;
       border-radius: 0 50px 50px 0;
       clip-path: polygon(
-        0 var(--base-unit),
-        100px var(--base-unit),
+        0 1rem,
+        100px 1rem,
         100px 0,
         100% 0,
         100% 100%,
@@ -72,14 +73,15 @@ export default {
       display: grid;
       grid-column: 1/11;
       grid-row: 1;
-      margin-right: var(--base-unit);
+      margin-right: 1rem;
+      position: relative;
     }
     @include breakpoint($large-width) {
-      border: solid calc(2 * var(--base-unit)) var(--off-white);
+      border: solid 2rem var(--off-white);
       border-left: none;
       clip-path: polygon(
-        0 calc(2 * var(--base-unit)),
-        100px calc(2 * var(--base-unit)),
+        0 2rem,
+        100px 2rem,
         100px 0,
         100% 0,
         100% 100%,
@@ -88,8 +90,8 @@ export default {
     }
     & > p {
       font-size: 18px;
-      line-height: calc(3 * var(--base-unit));
-      margin-bottom: calc(2 * var(--base-unit));
+      line-height: 3rem;
+      margin-bottom: 2rem;
     }
   }
 }

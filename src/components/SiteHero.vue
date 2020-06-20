@@ -65,14 +65,14 @@
   @include breakpoint($desktop-width) {
     grid-template-columns: 1fr 3fr;
     grid-template-rows: max-content auto;
-    height: calc(112 * var(--base-unit));
+    height: 112rem;
     &::before {
       background: var(--vintage-blue);
       content: "";
       grid-column: 1;
       grid-row: 1/3;
-      height: calc(100% + var(--base-unit));
-      margin-top: calc(2 * var(--base-unit));
+      height: calc(100% + 1rem);
+      margin-top: 2rem;
       width: 100px;
     }
     &::after {
@@ -89,17 +89,17 @@
     grid-template-columns: 1fr;
     grid-column: 1;
     @include breakpoint($desktop-width) {
-      border: solid var(--base-unit) var(--off-white);
+      border: solid 1rem var(--off-white);
       border-right: none;
       border-top: none;
       grid-row: 1/3;
-      height: calc(100% - var(--base-unit));
-      margin-left: var(--base-unit);
-      margin-top: calc(2 * var(--base-unit));
+      height: calc(100% - 1rem);
+      margin-left: 1rem;
+      margin-top: 2rem;
       border-radius: 0 0 0 50px;
     }
     @include breakpoint($large-width) {
-      border: solid calc(2 * var(--base-unit)) var(--off-white);
+      border: solid 2rem var(--off-white);
       border-right: none;
       border-top: none;
       height: 100%;
@@ -111,16 +111,16 @@
   }
   &__logo {
     grid-row: 3;
-    margin-right: calc(2 * var(--base-unit));
+    margin-right: 2rem;
   }
   &__description {
     grid-row: 4;
-    margin: calc(2 * var(--base-unit));
+    margin: 2rem;
   }
   &__hook {
     display: flex;
     grid-row: 1;
-    margin: calc(2 * var(--base-unit));
+    margin: 2rem;
     & > li {
       font-size: 0;
       &::before {
@@ -128,9 +128,9 @@
         border-radius: 50%;
         content: "";
         display: inline-block;
-        height: calc(2 * var(--base-unit));
-        margin-right: calc(2 * var(--base-unit));
-        width: calc(2 * var(--base-unit));
+        height: 2rem;
+        margin-right: 2rem;
+        width: 2rem;
       }
     }
   }
@@ -142,13 +142,13 @@
     @include breakpoint($tablet-width) {
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(8, 1fr);
-      grid-gap: calc(2 * var(--base-unit));
-      padding: calc(2 * var(--base-unit));
+      grid-gap: 2rem;
+      padding: 2rem;
     }
     @include breakpoint($desktop-width) {
       grid-row: 1;
       grid-template-columns: repeat(9, 1fr);
-      grid-template-rows: repeat(6, calc(12 * var(--base-unit)));
+      grid-template-rows: repeat(6, 12rem);
     }
     & li {
       @include mobile {
@@ -180,12 +180,12 @@
           z-index: 5;
           &::before {
             background: var(--off-white);
-            bottom: calc(-2 * var(--base-unit));
+            bottom: -2rem;
             content: "";
-            left: calc(-2 * var(--base-unit));
+            left: -2rem;
             position: absolute;
-            right: calc(-2 * var(--base-unit));
-            top: calc(-2 * var(--base-unit));
+            right: -2rem;
+            top: -2rem;
           }
         }
         &:nth-of-type(6) {
@@ -222,7 +222,7 @@
       @include breakpoint($large-width) {
         &:nth-of-type(3) {
           grid-row: 3/5;
-          margin-top: calc(6 * var(--base-unit));
+          margin-top: 6rem;
         }
       }
       & > img {

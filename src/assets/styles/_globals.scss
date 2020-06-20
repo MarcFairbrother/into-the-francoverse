@@ -48,6 +48,9 @@
 **
 */
 
+html {
+  font-size: 8px;
+}
 html * {
   box-sizing: border-box;
 }
@@ -77,7 +80,6 @@ html {
   --dark-grey: #0a0a0a;
   --off-white: #f1f0e9;
   --vintage-blue: #358a9d;
-  --base-unit: 8px;
 }
 body {
   background: var(--off-white);
