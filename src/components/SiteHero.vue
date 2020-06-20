@@ -7,7 +7,7 @@
       <ul class="hero__hook">
         <li>Psychedelic Sadism</li>
         <li>Murderous Lust</li>
-        <li>Ertica Exotica</li>
+        <li>Erotica Exotica</li>
       </ul>
     </header>
     <ul class="hero__images">
@@ -67,13 +67,19 @@
     grid-template-rows: max-content auto;
     height: 112rem;
     &::before {
-      background: var(--vintage-blue);
+      background: var(--vintage-blue)
+        url("../assets/img/stills/halftone_pattern.png");
+      background-blend-mode: darken;
+      background-size: 150px;
       content: "";
       grid-column: 1;
       grid-row: 1/3;
       height: calc(100% + 1rem);
       margin-top: 2rem;
       width: 100px;
+      @include breakpoint($large-width) {
+        background-size: 220px;
+      }
     }
     &::after {
       background: var(--dark-grey);
@@ -89,20 +95,13 @@
     grid-template-columns: 1fr;
     grid-column: 1;
     @include breakpoint($desktop-width) {
-      border: solid 1rem var(--off-white);
-      border-right: none;
-      border-top: none;
+      border-bottom: solid 1rem var(--off-white);
+      border-left: solid 1rem var(--off-white);
       grid-row: 1/3;
       height: calc(100% - 1rem);
       margin-left: 1rem;
       margin-top: 2rem;
       border-radius: 0 0 0 50px;
-    }
-    @include breakpoint($large-width) {
-      border: solid 2rem var(--off-white);
-      border-right: none;
-      border-top: none;
-      height: 100%;
     }
   }
   &__title {
@@ -121,8 +120,18 @@
     display: flex;
     grid-row: 1;
     margin: 2rem;
+    @include breakpoint($tablet-width) {
+      flex-direction: column;
+    }
     & > li {
       font-size: 0;
+      @include breakpoint($tablet-width) {
+        align-items: center;
+        display: flex;
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-bottom: 2rem;
+      }
       &::before {
         background: white;
         border-radius: 50%;
@@ -131,6 +140,9 @@
         height: 2rem;
         margin-right: 2rem;
         width: 2rem;
+        @include breakpoint($tablet-width) {
+          margin-top: -2px;
+        }
       }
     }
   }
