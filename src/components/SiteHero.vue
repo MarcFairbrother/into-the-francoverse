@@ -145,7 +145,7 @@
   }
   @include breakpoint($desktop-width) {
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: max-content auto;
+    grid-template-rows: 86rem auto;
     height: 112rem;
     &::before {
       background: var(--vintage-blue)
@@ -161,6 +161,9 @@
       @include breakpoint($large-width) {
         background-size: 220px;
       }
+      @include breakpoint($very-large) {
+        background-size: 200px;
+      }
     }
     &::after {
       background: var(--dark-grey);
@@ -173,8 +176,11 @@
     background: var(--dark-grey);
     color: var(--off-white);
     display: grid;
-    grid-template-columns: 1fr;
     grid-column: 1;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    padding: 0;
     @include breakpoint($desktop-width) {
       border-bottom: solid 1rem var(--off-white);
       border-left: solid 1rem var(--off-white);
@@ -183,24 +189,65 @@
       margin-left: 1rem;
       margin-top: 2rem;
       border-radius: 0 0 0 50px;
+      overflow: visible;
+      z-index: 5;
     }
   }
   &__title {
     font-size: 0;
-    grid-row: 2;
+    grid-column: 1;
+    grid-row: 4/7;
   }
   &__logo {
-    grid-row: 3;
+    grid-column: 1;
+    grid-row: 4/7;
     margin-right: 2rem;
+    @include breakpoint($tablet-width) {
+      align-self: end;
+      transform: translateY(20%);
+    }
+    @include breakpoint($large-width) {
+      width: 75%;
+      margin-right: 0;
+    }
   }
   &__description {
-    grid-row: 4;
-    margin: 2rem;
+    align-self: end;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 1.5rem;
+    grid-row: 7/9;
+    margin: 0 2rem;
+    text-align: left;
+    &::before {
+      background: url("data:image/svg+xml; utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%2220%22%20viewBox%3D%220%200%2026.458332%205.291667%22%3E%0A%20%20%3Cg%20transform%3D%22translate%280%20-291.70832%29%22%20paint-order%3D%22fill%20markers%20stroke%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%222.6458333%22%20cy%3D%22294.35416%22%20r%3D%222.6458333%22%20fill%3D%22%2345b3b1%22%2F%3E%0A%20%20%20%20%3Ccircle%20r%3D%222.6458333%22%20cy%3D%22294.35416%22%20cx%3D%2213.229167%22%20fill%3D%22%23e48a99%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2223.8125%22%20cy%3D%22294.35416%22%20r%3D%222.6458333%22%20fill%3D%22%239c83c6%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+      background-size: 10rem;
+      content: "";
+      display: block;
+      height: 1rem;
+      margin-right: 2rem;
+      margin-top: 2rem;
+      width: 10rem;
+    }
+    @include breakpoint($tablet-width) {
+      font-size: 1.75rem;
+    }
+    @include breakpoint($desktop-width) {
+      align-items: center;
+      flex-direction: row;
+      font-size: 2rem;
+      margin-bottom: 5rem;
+      width: 150%;
+      &::before {
+        height: 2rem;
+        margin-top: 0;
+      }
+    }
   }
   &__hook {
     display: flex;
-    grid-row: 1;
-    margin: 2rem;
+    grid-row: 1/4;
+    margin: calc(2rem + 2px) 2rem 0;
     @include breakpoint($tablet-width) {
       flex-direction: column;
     }
@@ -210,8 +257,17 @@
         align-items: center;
         display: flex;
         font-size: 2rem;
-        line-height: 2rem;
+        line-height: 1.5rem;
         margin-bottom: 2rem;
+      }
+      &:nth-of-type(1):before {
+        background: #45b3b1;
+      }
+      &:nth-of-type(2):before {
+        background: #e48a99;
+      }
+      &:nth-of-type(3):before {
+        background: #9c83c6;
       }
       &::before {
         background: white;
@@ -311,6 +367,9 @@
         &:nth-of-type(1) {
           grid-column: 7/10;
           grid-row: 1/7;
+          & img {
+            border-radius: 0 50px 0 0;
+          }
         }
       }
       & > picture,
@@ -320,13 +379,14 @@
         object-fit: cover;
         width: 100%;
         &.blue-tint {
-          filter: sepia(100%) hue-rotate(130deg) saturate(150%);
+          filter: sepia(100%) hue-rotate(130deg) saturate(225%);
         }
         &.red-tint {
           filter: sepia(100%) hue-rotate(300deg) saturate(175%);
         }
         &.purple-tint {
-          filter: sepia(100%) hue-rotate(220deg) saturate(125%);
+          filter: sepia(100%) hue-rotate(220deg) saturate(150%) brightness(80%)
+            contrast(110%);
         }
       }
     }
