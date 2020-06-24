@@ -3,7 +3,7 @@
     <path
       class="grid__horizontal"
       data-count="0"
-      style="stroke: rgb(10, 10, 10, .25);"
+      style="stroke: rgb(205,205,205);"
       d="M-5,140 L565, 140"
     />
     <path class="grid__horizontal" data-count="1" d="M-5,130 L565, 130" />
@@ -96,21 +96,21 @@ export default {
 }
 .grid {
   &__horizontal {
-    stroke: rgba(10, 10, 10, 0.25);
+    stroke: rgb(205, 205, 205);
     stroke-width: 1;
     transition: all 0.15s ease-out;
     &.grid__horizontal--active {
-      stroke: rgba(10, 10, 10, 0.5);
+      stroke: rgb(160, 160, 160);
       z-index: 5;
     }
   }
   &__vertical {
-    stroke: rgba(10, 10, 10, 0.25);
+    stroke: rgb(205, 205, 205);
     stroke-width: 1;
     transition: stroke 0.15s ease-out;
     z-index: 0;
     &.grid__vertical--active {
-      stroke: rgba(10, 10, 10, 0.5);
+      stroke: rgb(160, 160, 160);
     }
   }
 }

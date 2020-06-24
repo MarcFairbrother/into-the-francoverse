@@ -66,10 +66,10 @@ export default {
       filmSelections: [],
       baseColors: [
         { purple: "rgb(102,58,136)" },
-        { blue: "rgb(30,123,158)" },
-        { green: "rgb(69,179,177)" },
+        { blue: "rgb(15,95,115)" },
+        { green: "rgb(35,130,130)" },
         { lavender: "rgb(156,131,198)" },
-        { pink: "rgb(228,138,153)" }
+        { red: "rgb(215,55,85)" }
       ]
     };
   },
