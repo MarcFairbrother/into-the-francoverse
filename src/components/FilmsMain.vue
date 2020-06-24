@@ -1,9 +1,5 @@
 <template>
   <main class="films">
-    <h3 class="films__heading">
-      <span>Maniacs &amp; Vampires! Sex, Lust &amp; Murder!</span>
-      <br />Charting the wonderfully weird worlds of Jess Franco!
-    </h3>
     <section class="films__chart">
       <div class="labels--y">
         <ChartLabelsY />
@@ -321,7 +317,6 @@ export default {
 
 <style lang="scss">
 .films {
-  background: rgb(232, 224, 184);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   padding: 15px;
@@ -333,26 +328,6 @@ export default {
   }
   @include breakpoint($large-width) {
     grid-template-columns: 1fr 1020px 1fr;
-  }
-  &__heading {
-    grid-column: 2;
-    grid-row: 1;
-    color: var(--pulp-red);
-    font-family: "Changa One", Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    letter-spacing: 1px;
-    line-height: 1.5;
-    @include breakpoint($tablet-width) {
-      font-size: 20px;
-      line-height: 1.25;
-    }
-    & > span {
-      color: var(--dark-grey);
-      font-size: 18px;
-      @include breakpoint($tablet-width) {
-        font-size: 28px;
-      }
-    }
   }
   &__chart {
     grid-column: 2;

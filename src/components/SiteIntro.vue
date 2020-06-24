@@ -28,7 +28,6 @@ export default {
 
 <style lang="scss" scoped>
 .intro {
-  color: var(--dark-grey);
   @include breakpoint($desktop-width) {
     display: grid;
     grid-row: 2;
@@ -93,6 +92,11 @@ export default {
       margin-bottom: 2rem;
       &:last-of-type {
         margin-bottom: 0;
+      }
+      @include breakpoint($tablet-width) {
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 4rem;
       }
       @include breakpoint($desktop-width) {
         font-size: 3rem;
