@@ -65,11 +65,11 @@ export default {
       films: Filmography,
       filmSelections: [],
       baseColors: [
-        { brown: "rgb(125,75,35)" },
-        { blue: "rgb(25,75,95)" },
-        { green: "rgb(95,125,100)" },
-        { purple: "rgb(95,50,90)" },
-        { red: "rgb(150,30,20)" }
+        { purple: "rgb(102,58,136)" },
+        { blue: "rgb(30,123,158)" },
+        { green: "rgb(69,179,177)" },
+        { lavender: "rgb(156,131,198)" },
+        { pink: "rgb(228,138,153)" }
       ]
     };
   },
@@ -318,50 +318,91 @@ export default {
 <style lang="scss">
 .films {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  padding: 15px;
-  @include breakpoint($tablet-width) {
-    grid-template-columns: 1fr 680px 1fr;
-  }
+  grid-template-columns: 1fr;
+  padding: 0 2rem;
+  position: relative;
   @include breakpoint($desktop-width) {
-    grid-template-columns: 1fr 920px 1fr;
-  }
-  @include breakpoint($large-width) {
-    grid-template-columns: 1fr 1020px 1fr;
+    grid-template-columns: repeat(12, 1fr);
   }
   &__chart {
-    grid-column: 2;
-    grid-row: 2;
-    position: relative;
-    width: 100%;
+    grid-row: 1;
+    margin-left: 3.5rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    @include breakpoint($desktop-width) {
+      grid-column: 2/12;
+      margin-left: 0;
+      margin-top: 4rem;
+      overflow: hidden;
+      position: relative;
+      transform: translateX(-2.5rem);
+      width: calc(100% + 2.5rem);
+    }
+    @include breakpoint($large-width) {
+      margin-top: 6rem;
+      transform: translateX(-4rem);
+      width: calc(100% + 4rem);
+    }
     & .graph {
-      width: 100%;
       display: block;
+      height: 65vh;
+      width: auto;
+      @include breakpoint($desktop-width) {
+        height: auto;
+        margin-left: 2.5rem;
+        width: calc(100% - 2.5rem);
+      }
+      @include breakpoint($large-width) {
+        height: auto;
+        margin-left: 4rem;
+        width: calc(100% - 4rem);
+      }
     }
     & .labels--y {
-      position: absolute;
-      top: 0;
+      background: var(--off-white);
       bottom: 0;
-      right: 100%;
-      width: 17px;
+      left: 2rem;
+      position: absolute;
+      top: 0rem;
+      @include breakpoint($desktop-width) {
+        left: 0;
+      }
       & > svg {
-        height: 100%;
+        height: 65vh;
+        @include breakpoint($desktop-width) {
+          height: 100%;
+        }
       }
     }
   }
   &__selections {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column: 2;
-    grid-row: 3;
+    grid-row: 2;
     @include breakpoint($tablet-width) {
       grid-template-columns: repeat(4, 1fr);
+    }
+    @include breakpoint($desktop-width) {
+      grid-column: 2/11;
     }
   }
   &__filters {
     display: grid;
     grid-template-columns: 1fr;
-    grid-column: 2;
+    grid-row: 3;
+    @include breakpoint($tablet-width) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint($desktop-width) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoint($desktop-width) {
+      grid-column: 2/11;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-row: 4;
     @include breakpoint($tablet-width) {
       grid-template-columns: repeat(2, 1fr);
@@ -369,17 +410,8 @@ export default {
     @include breakpoint($desktop-width) {
       grid-template-columns: repeat(3, 1fr);
     }
-  }
-  &__list {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column: 2;
-    grid-row: 5;
-    @include breakpoint($tablet-width) {
-      grid-template-columns: repeat(2, 1fr);
-    }
     @include breakpoint($desktop-width) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-column: 2/11;
     }
   }
 }

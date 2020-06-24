@@ -3,7 +3,7 @@
     version="1.1"
     baseProfile="full"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="-5 0 570 180"
+    viewBox="-5 0 570 175"
   >
     <ChartGrid :all-years="allYears" :yearly-count="yearlyCount" />
     <FilmsPath
@@ -82,9 +82,9 @@ export default {
       let x = 0;
       for (const property in data) {
         if (x === 0) {
-          coordinates.push(`M${x},${150 - data[property].length * 10}`);
+          coordinates.push(`M${x},${140 - data[property].length * 10}`);
         } else {
-          coordinates.push(`L${x},${150 - data[property].length * 10}`);
+          coordinates.push(`L${x},${140 - data[property].length * 10}`);
         }
         x = x + 10;
       }
