@@ -20,8 +20,8 @@
         @removeSelection="disableSelection(filmSelections, $event)"
         @editFilters="toggleEditing($event)"
       />
-      <li v-show="activeSelections.length < 4">
-        <button @click="addNewSelection">Add New Selection</button>
+      <li class="add__selection" v-show="activeSelections.length < 4">
+        <button @click="addNewSelection">New Selection</button>
       </li>
     </ul>
     <SelectionFilters
@@ -360,11 +360,11 @@ export default {
     }
     & .labels--y {
       background: var(--off-white);
-      bottom: 0;
       left: 2rem;
       position: absolute;
       top: 0rem;
       @include breakpoint($desktop-width) {
+        bottom: 0;
         left: 0;
       }
       & > svg {
@@ -377,41 +377,70 @@ export default {
   }
   &__selections {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
     grid-row: 2;
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
     @include breakpoint($tablet-width) {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
     @include breakpoint($desktop-width) {
-      grid-column: 2/11;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column: 2/12;
+    }
+    & > .add__selection {
+      align-items: center;
+      border: solid 1px var(--dark-grey);
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      padding: 4rem;
+      & > button {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        cursor: pointer;
+        &::before {
+          background: url("data:image/svg+xml; utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2012.7%2012.7%22%3E%3Cpath%20d%3D%22M6.35%200A6.35%206.35%200%20000%206.35a6.35%206.35%200%20006.35%206.35%206.35%206.35%200%20006.35-6.35A6.35%206.35%200%20006.35%200zM5.292%202.117h2.116v3.175h3.175v2.116H7.408v3.175H5.292V7.408H2.117V5.292h3.175V2.117z%22%20fill%3D%22%230a0a0a%22%20paint-order%3D%22fill%20markers%20stroke%22%2F%3E%3C%2Fsvg%3E");
+          background-size: 6rem;
+          content: "";
+          display: block;
+          height: 6rem;
+          margin: 2rem 0;
+          width: 6rem;
+        }
+      }
     }
   }
   &__filters {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-gap: 4rem;
     grid-row: 3;
+    grid-template-columns: 1fr;
+    margin: 6rem 0;
     @include breakpoint($tablet-width) {
       grid-template-columns: repeat(2, 1fr);
     }
     @include breakpoint($desktop-width) {
       grid-template-columns: repeat(3, 1fr);
-    }
-    @include breakpoint($desktop-width) {
-      grid-column: 2/11;
+      grid-column: 2/12;
     }
   }
   &__list {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-gap: 4rem;
     grid-row: 4;
+    grid-template-columns: 1fr;
     @include breakpoint($tablet-width) {
       grid-template-columns: repeat(2, 1fr);
     }
     @include breakpoint($desktop-width) {
       grid-template-columns: repeat(3, 1fr);
+      grid-column: 2/12;
     }
-    @include breakpoint($desktop-width) {
-      grid-column: 2/11;
+    @include breakpoint($large-width) {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }
