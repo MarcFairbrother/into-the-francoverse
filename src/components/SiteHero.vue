@@ -137,6 +137,7 @@
 
 <style lang="scss" scoped>
 .hero {
+  background: var(--dark-grey);
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
@@ -144,6 +145,7 @@
     grid-template-columns: 1fr 2fr;
   }
   @include breakpoint($desktop-width) {
+    background: none;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 86rem auto;
     height: 112rem;
@@ -155,9 +157,10 @@
       content: "";
       grid-column: 1;
       grid-row: 1/3;
-      height: calc(100% + 1rem);
+      height: calc(100% - 1rem);
       margin-top: 2rem;
       width: 100px;
+      z-index: 5;
       @include breakpoint($large-width) {
         background-size: 220px;
       }
@@ -213,34 +216,34 @@
   }
   &__description {
     align-self: end;
-    display: flex;
-    flex-direction: column-reverse;
-    font-size: 1.5rem;
+    font-size: 2rem;
     grid-row: 7/9;
+    line-height: 2.5rem;
     margin: 0 2rem;
     text-align: left;
-    &::before {
-      background: url("data:image/svg+xml; utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%2220%22%20viewBox%3D%220%200%2026.458332%205.291667%22%3E%0A%20%20%3Cg%20transform%3D%22translate%280%20-291.70832%29%22%20paint-order%3D%22fill%20markers%20stroke%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%222.6458333%22%20cy%3D%22294.35416%22%20r%3D%222.6458333%22%20fill%3D%22%2345b3b1%22%2F%3E%0A%20%20%20%20%3Ccircle%20r%3D%222.6458333%22%20cy%3D%22294.35416%22%20cx%3D%2213.229167%22%20fill%3D%22%23e48a99%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2223.8125%22%20cy%3D%22294.35416%22%20r%3D%222.6458333%22%20fill%3D%22%239c83c6%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
-      background-size: 10rem;
-      content: "";
-      display: block;
-      height: 1rem;
-      margin-right: 2rem;
-      margin-top: 2rem;
-      width: 10rem;
-    }
     @include breakpoint($tablet-width) {
-      font-size: 1.75rem;
+      display: flex;
+      line-height: 2rem;
+      transform: translateY(4rem);
+      width: 150%;
     }
     @include breakpoint($desktop-width) {
       align-items: center;
       flex-direction: row;
       font-size: 2rem;
       margin-bottom: 5rem;
-      width: 150%;
-      &::before {
+      transform: translateY(0);
+    }
+    &::before {
+      @include breakpoint($tablet-width) {
+        background: url("data:image/svg+xml; utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%2220%22%20viewBox%3D%220%200%2026.458332%205.291667%22%3E%0A%20%20%3Cg%20transform%3D%22translate%280%20-291.70832%29%22%20paint-order%3D%22fill%20markers%20stroke%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%222.6458333%22%20cy%3D%22294.35416%22%20r%3D%222.6458333%22%20fill%3D%22%2345b3b1%22%2F%3E%0A%20%20%20%20%3Ccircle%20r%3D%222.6458333%22%20cy%3D%22294.35416%22%20cx%3D%2213.229167%22%20fill%3D%22%23e48a99%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2223.8125%22%20cy%3D%22294.35416%22%20r%3D%222.6458333%22%20fill%3D%22%239c83c6%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+        background-size: 10rem;
+        content: "";
+        display: block;
         height: 2rem;
         margin-top: 0;
+        margin-right: 2rem;
+        width: 10rem;
       }
     }
   }
@@ -284,17 +287,20 @@
     }
   }
   &__images {
+    border-radius: 0 0 0 48px;
     display: grid;
     grid-column: 2;
     grid-template-columns: 1fr;
     overflow: hidden;
     @include breakpoint($tablet-width) {
+      background: var(--off-white);
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(8, 1fr);
       grid-gap: 2rem;
       padding: 2rem;
     }
     @include breakpoint($desktop-width) {
+      border-radius: 0;
       grid-row: 1;
       grid-template-columns: repeat(9, 1fr);
       grid-template-rows: repeat(6, 12rem);
@@ -321,6 +327,9 @@
         &:nth-of-type(4) {
           grid-column: 4/7;
           grid-row: 1/4;
+          & img {
+            border-radius: 0 40px 0 0;
+          }
         }
         &:nth-of-type(3) {
           grid-column: 3/7;
@@ -344,6 +353,9 @@
         &:nth-of-type(2) {
           grid-column: 1/4;
           grid-row: 7/9;
+          & img {
+            border-radius: 0 0 0 40px;
+          }
         }
         &:nth-of-type(1) {
           grid-column: 4/7;
@@ -351,6 +363,11 @@
         }
       }
       @include breakpoint($desktop-width) {
+        &:nth-of-type(4) {
+          & img {
+            border-radius: 0;
+          }
+        }
         &:nth-of-type(3) {
           grid-column: 3/8;
           grid-row: 3/5;
@@ -363,6 +380,9 @@
         &:nth-of-type(2) {
           grid-column: 4/7;
           grid-row: 5/7;
+          & img {
+            border-radius: 0;
+          }
         }
         &:nth-of-type(1) {
           grid-column: 7/10;
