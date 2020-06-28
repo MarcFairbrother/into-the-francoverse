@@ -184,8 +184,6 @@ export default {
     flex-wrap: wrap;
   }
   & select {
-    background: var(--off-white)
-      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(50,50,50)'><polygon points='0,0 100,0 50,50'/></svg>");
     background: var(--off-white) var(--selection-arrow);
     background-repeat: no-repeat;
     background-position: right 2rem top 2.5rem;
