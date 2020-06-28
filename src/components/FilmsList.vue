@@ -120,7 +120,7 @@ export default {
     & > li {
       align-items: center;
       border: solid 1px var(--off-white);
-      border-radius: 25px;
+      border-radius: 2rem;
       display: flex;
       font-size: 1.5rem;
       font-weight: 400;

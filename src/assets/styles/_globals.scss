@@ -77,11 +77,18 @@ button {
   box-sizing: content-box;
   border: 0;
   color: inherit;
-  font: inherit;
+  font-family: inherit;
   line-height: normal;
   overflow: visible;
   padding: 0;
   text-align: left;
+}
+select {
+  appearance: none;
+  border: none;
+  color: var(--off-white);
+  font-family: inherit;
+  font-weight: 600;
 }
 
 /* 

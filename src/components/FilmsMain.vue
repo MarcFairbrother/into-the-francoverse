@@ -31,7 +31,6 @@
       :film-selection="selection"
       :selection-id="i"
       :available-colors="availableColors"
-      @removeSelection="deleteFromArray(filmSelections, $event)"
       @selectColor="colorSelection"
       @selectFilter="filterSelection"
       @removeFilter="
@@ -65,11 +64,11 @@ export default {
       films: Filmography,
       filmSelections: [],
       baseColors: [
-        { purple: "rgb(102,58,136)" },
-        { blue: "rgb(15,95,115)" },
-        { green: "rgb(35,130,130)" },
-        { lavender: "rgb(156,131,198)" },
-        { red: "rgb(215,55,85)" }
+        { Purple: "#663a88" },
+        { Blue: "#0f5f73" },
+        { Green: "#238282" },
+        { Lavender: "#9c83c6" },
+        { Red: "#d73754" }
       ]
     };
   },
