@@ -92,18 +92,21 @@ export default {
 <style lang="scss" scoped>
 .film {
   background: var(--dark-grey);
-  border-radius: 50px;
+  border: double 1.5rem var(--off-white);
+  border-radius: 7rem;
+  padding: 0.5rem;
   &__card {
-    background: url("data:image/svg+xml; utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2012.7%2012.7%22%3E%3Cpath%20d%3D%22M8.467%2012.7V0h2.117v12.7zm-4.234%200V0H6.35v12.7zM0%2012.7V0h2.117v12.7z%22%20fill%3D%22%23f1f0e9%22%20paint-order%3D%22fill%20markers%20stroke%22%2F%3E%3C%2Fsvg%3E");
-    background-position: right;
-    background-repeat: repeat-y;
-    background-size: 3rem;
+    border: double 1.5rem var(--off-white);
+    border-radius: 5rem;
     color: var(--off-white);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: max-content max-content max-content auto;
     height: 100%;
-    padding: 4rem;
+    padding: 4rem 2rem;
+    @include breakpoint($desktop-width) {
+      padding: 4rem;
+    }
   }
   &__title {
     font-size: 2rem;
