@@ -3,7 +3,10 @@
     <header class="hero__header">
       <h1 class="hero__title">Into the Franco Verse</h1>
       <SiteLogo class="hero__logo" />
-      <p class="hero__description">An Experiment in Data Visualisation</p>
+      <p class="hero__description">
+        An <br class="mobile-only" />Experiment <br class="mobile-only" />in
+        <br class="mobile-only" />Data <br class="mobile-only" />Visualisation
+      </p>
       <ul class="hero__hook">
         <li>Psychedelic Sadism</li>
         <li>Murderous Lust</li>
@@ -141,6 +144,20 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
+  @include mobile {
+    &::before {
+      content: "";
+      border: solid 0.5rem var(--off-white);
+      border-top: none;
+      border-radius: 0 0 0 7rem;
+      border-right: none;
+      grid-column: 2;
+      grid-row: 1;
+      height: calc(100% - 2.5rem);
+      transform: translateX(-1rem);
+      width: calc(100% + 0.5rem);
+    }
+  }
   @include breakpoint($tablet-width) {
     grid-template-columns: 1fr 2fr;
   }
@@ -204,7 +221,7 @@
   &__logo {
     grid-column: 1;
     grid-row: 4/7;
-    margin-right: 2rem;
+    margin-right: 3rem;
     @include breakpoint($tablet-width) {
       align-self: end;
       transform: translateY(20%);
@@ -219,11 +236,12 @@
     font-size: 2rem;
     grid-row: 7/9;
     line-height: 2.5rem;
-    margin: 0 2rem;
+    margin: 0 2rem 1.5rem;
     text-align: left;
     @include breakpoint($tablet-width) {
       display: flex;
       line-height: 2rem;
+      margin-bottom: 0;
       transform: translateY(4rem);
       width: 150%;
     }
@@ -287,11 +305,18 @@
     }
   }
   &__images {
-    border-radius: 0 0 0 48px;
+    border-radius: 0 0 0 6rem;
     display: grid;
     grid-column: 2;
     grid-template-columns: 1fr;
     overflow: hidden;
+    @include mobile {
+      border: double 1.5rem var(--off-white);
+      border-right: none;
+      border-top: none;
+      grid-row: 1;
+      height: calc(100% - 3rem);
+    }
     @include breakpoint($tablet-width) {
       background: var(--off-white);
       grid-template-columns: repeat(6, 1fr);
@@ -409,6 +434,11 @@
             contrast(110%);
         }
       }
+    }
+  }
+  & .mobile-only {
+    @include breakpoint($tablet-width) {
+      display: none;
     }
   }
 }
