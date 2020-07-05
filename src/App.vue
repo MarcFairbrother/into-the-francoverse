@@ -3,6 +3,7 @@
     <SiteHero />
     <SiteIntro />
     <FilmsMain />
+    <SiteFooter />
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import SiteHero from "./components/SiteHero";
 import SiteIntro from "./components/SiteIntro";
 import FilmsMain from "./components/FilmsMain";
+import SiteFooter from "./components/SiteFooter";
 
 export default {
   name: "app",
   components: {
     SiteHero,
     SiteIntro,
-    FilmsMain
+    FilmsMain,
+    SiteFooter
   }
 };
 </script>
