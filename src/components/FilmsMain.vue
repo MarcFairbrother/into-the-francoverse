@@ -365,6 +365,7 @@ export default {
       @include breakpoint($desktop-width) {
         bottom: 0;
         left: 0;
+        width: min-content;
       }
       & > svg {
         height: 65vh;
