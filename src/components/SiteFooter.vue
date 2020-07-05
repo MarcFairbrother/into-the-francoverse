@@ -4,7 +4,7 @@
       <p>This website is dedicated to Soledad, Lina, and Jess.</p>
       <p>
         The data is based on the filmography established by Stephen Thrower in
-        <em>Murderous Passions</em> and <em>Flowers of Peversion</em>,
+        <em>Murderous Passions</em> and <em>Flowers of Perversion</em>,
         respectively published by Strange Attractor in 2015 and 2019.
       </p>
       <p>Additional information was gleaned from IMDb when necessary.</p>
