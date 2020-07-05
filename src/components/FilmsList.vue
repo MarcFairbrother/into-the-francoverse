@@ -91,13 +91,12 @@ export default {
 
 <style lang="scss" scoped>
 .film {
-  background: var(--dark-grey);
-  border: double 1.5rem var(--off-white);
-  border-radius: 7rem;
-  padding: 0.5rem;
+  border: double 1.5rem var(--dark-grey);
+  border-radius: 5.5rem;
   &__card {
+    background: var(--dark-grey);
     border: double 1.5rem var(--off-white);
-    border-radius: 5rem;
+    border-radius: 4rem;
     color: var(--off-white);
     display: grid;
     grid-template-columns: 1fr;
