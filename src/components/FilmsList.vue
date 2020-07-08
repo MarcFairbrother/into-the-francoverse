@@ -143,6 +143,7 @@ export default {
         border-radius: 50%;
         content: "";
         display: block;
+        flex-shrink: 0;
         height: 1rem;
         margin-right: 1rem;
         width: 1rem;
