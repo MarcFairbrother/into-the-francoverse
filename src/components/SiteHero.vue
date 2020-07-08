@@ -254,13 +254,14 @@
     }
     &::before {
       @include breakpoint($tablet-width) {
-        background: url("data:image/svg+xml; utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%2220%22%20viewBox%3D%220%200%2026.458332%205.291667%22%3E%0A%20%20%3Cg%20transform%3D%22translate%280%20-291.70832%29%22%20paint-order%3D%22fill%20markers%20stroke%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%222.6458333%22%20cy%3D%22294.35416%22%20r%3D%222.6458333%22%20fill%3D%22%2345b3b1%22%2F%3E%0A%20%20%20%20%3Ccircle%20r%3D%222.6458333%22%20cy%3D%22294.35416%22%20cx%3D%2213.229167%22%20fill%3D%22%23e48a99%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2223.8125%22%20cy%3D%22294.35416%22%20r%3D%222.6458333%22%20fill%3D%22%239c83c6%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+        background: url("data:image/svg+xml; utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%2220%22%20viewBox%3D%220%200%2026.458332%205.291667%22%3E%0A%20%20%3Cg%20transform%3D%22translate%280%20-291.70832%29%22%20paint-order%3D%22fill%20markers%20stroke%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%222.6458333%22%20cy%3D%22294.35416%22%20r%3D%222.6458333%22%20fill%3D%22%231cbdba%22%2F%3E%0A%20%20%20%20%3Ccircle%20r%3D%222.6458333%22%20cy%3D%22294.35416%22%20cx%3D%2213.229167%22%20fill%3D%22%23f73636%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2223.8125%22%20cy%3D%22294.35416%22%20r%3D%222.6458333%22%20fill%3D%22%23f113cb%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
         background-size: 10rem;
         content: "";
         display: block;
         height: 2rem;
-        margin-top: 0;
+        margin-bottom: 1px;
         margin-right: 2rem;
+        margin-top: 0;
         width: 10rem;
       }
     }
@@ -282,13 +283,13 @@
         margin-bottom: 2rem;
       }
       &:nth-of-type(1):before {
-        background: #45b3b1;
+        background: #1cbdba;
       }
       &:nth-of-type(2):before {
-        background: #e48a99;
+        background: #f73636;
       }
       &:nth-of-type(3):before {
-        background: #9c83c6;
+        background: #f113cb;
       }
       &::before {
         background: white;
@@ -424,14 +425,14 @@
         object-fit: cover;
         width: 100%;
         &.blue-tint {
-          filter: sepia(100%) hue-rotate(130deg) saturate(225%);
+          filter: sepia(100%) hue-rotate(130deg) saturate(225%) brightness(125%);
         }
         &.red-tint {
-          filter: sepia(100%) hue-rotate(300deg) saturate(175%);
+          filter: sepia(100%) hue-rotate(300deg) saturate(250%);
         }
         &.purple-tint {
-          filter: sepia(100%) hue-rotate(220deg) saturate(150%) brightness(80%)
-            contrast(110%);
+          filter: sepia(100%) hue-rotate(250deg) saturate(180%) brightness(85%)
+            contrast(125%);
         }
       }
     }

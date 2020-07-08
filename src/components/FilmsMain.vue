@@ -64,11 +64,11 @@ export default {
       films: Filmography,
       filmSelections: [],
       baseColors: [
-        { Purple: "#663a88" },
-        { Blue: "#0f5f73" },
-        { Green: "#238282" },
-        { Lavender: "#9c83c6" },
-        { Red: "#d73754" }
+        { Pink: "#b748a4" },
+        { Turquoise: "#1cbdba" },
+        { Blue: "#3b6ea7" },
+        { Lavender: "#b187ec" },
+        { Red: "#f73636" }
       ]
     };
   },
