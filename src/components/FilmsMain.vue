@@ -325,7 +325,9 @@ export default {
   }
   &__chart {
     grid-row: 1;
+    margin-bottom: 2rem;
     margin-left: 3.5rem;
+    margin-top: 6rem;
     overflow-x: scroll;
     overflow-y: hidden;
     @include breakpoint($desktop-width) {
@@ -346,6 +348,9 @@ export default {
       display: block;
       height: 65vh;
       width: auto;
+      @include breakpoint($tablet-width) {
+        height: 40vh;
+      }
       @include breakpoint($desktop-width) {
         height: auto;
         margin-left: 2.5rem;
@@ -361,14 +366,18 @@ export default {
       background: var(--off-white);
       left: 2rem;
       position: absolute;
-      top: 0rem;
+      top: 6rem;
       @include breakpoint($desktop-width) {
         bottom: 0;
         left: 0;
+        top: 0;
         width: min-content;
       }
       & > svg {
         height: 65vh;
+        @include breakpoint($tablet-width) {
+          height: 40vh;
+        }
         @include breakpoint($desktop-width) {
           height: 100%;
         }

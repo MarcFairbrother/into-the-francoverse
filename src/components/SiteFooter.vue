@@ -41,13 +41,12 @@ export default {
   font-size: 2rem;
   font-weight: 400;
   line-height: 3rem;
-  margin-top: 4rem;
+  margin-top: 6rem;
   @include breakpoint($desktop-width) {
     display: grid;
     font-size: 3rem;
     grid-template-columns: repeat(12, 1fr);
     line-height: 5rem;
-    margin-top: 6rem;
   }
   @include breakpoint($large-width) {
     font-size: 4rem;

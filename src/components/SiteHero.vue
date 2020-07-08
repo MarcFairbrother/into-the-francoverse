@@ -239,21 +239,20 @@
     margin: 0 2rem 1.5rem;
     text-align: left;
     @include breakpoint($tablet-width) {
-      display: flex;
-      line-height: 2rem;
-      margin-bottom: 0;
-      transform: translateY(4rem);
-      width: 150%;
+      margin-bottom: 2rem;
     }
     @include breakpoint($desktop-width) {
+      display: flex;
       align-items: center;
       flex-direction: row;
       font-size: 2rem;
+      line-height: 2rem;
       margin-bottom: 5rem;
       transform: translateY(0);
+      width: 150%;
     }
     &::before {
-      @include breakpoint($tablet-width) {
+      @include breakpoint($desktop-width) {
         background: url("data:image/svg+xml; utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%2220%22%20viewBox%3D%220%200%2026.458332%205.291667%22%3E%0A%20%20%3Cg%20transform%3D%22translate%280%20-291.70832%29%22%20paint-order%3D%22fill%20markers%20stroke%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%222.6458333%22%20cy%3D%22294.35416%22%20r%3D%222.6458333%22%20fill%3D%22%231cbdba%22%2F%3E%0A%20%20%20%20%3Ccircle%20r%3D%222.6458333%22%20cy%3D%22294.35416%22%20cx%3D%2213.229167%22%20fill%3D%22%23f73636%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2223.8125%22%20cy%3D%22294.35416%22%20r%3D%222.6458333%22%20fill%3D%22%23f113cb%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
         background-size: 10rem;
         content: "";
@@ -438,7 +437,7 @@
     }
   }
   & .mobile-only {
-    @include breakpoint($tablet-width) {
+    @include breakpoint($desktop-width) {
       display: none;
     }
   }
