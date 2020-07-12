@@ -20,9 +20,11 @@
         @removeSelection="disableSelection(filmSelections, $event)"
         @editFilters="toggleEditing($event)"
       />
-      <li class="add__selection" v-show="activeSelections.length < 4">
-        <button @click="addNewSelection">New Selection</button>
-      </li>
+      <transition name="add">
+        <li class="add__selection" v-show="activeSelections.length < 4">
+          <button @click="addNewSelection">New Selection</button>
+        </li>
+      </transition>
     </ul>
     <SelectionFilters
       v-for="(selection, i) in reactiveSelections"
@@ -452,5 +454,23 @@ export default {
       grid-template-columns: repeat(4, 1fr);
     }
   }
+}
+/*
+*
+* Add button in/out transitions
+*
+*/
+.add-enter,
+.add-leave-to {
+  opacity: 0;
+  position: absolute;
+}
+.add-enter-active {
+  position: absolute;
+  transition-delay: 0.35s;
+}
+.add-leave-active {
+  position: absolute;
+  opacity: 0;
 }
 </style>

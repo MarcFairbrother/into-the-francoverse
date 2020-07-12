@@ -1,12 +1,14 @@
 <template>
-  <li class="selection" :style="`background-color: ${selectionColor}`">
-    <article>
-      <h3>Selection {{ selectionId + 1 }}</h3>
-      <p>{{ filmSelection.currentFilms.length }} films</p>
-      <button @click="removeSelection(selectionId)">Delete Section</button>
-      <button @click="editFilters(selectionId)">Edit Filters</button>
-    </article>
-  </li>
+  <transition name="selection">
+    <li class="selection" :style="`background-color: ${selectionColor}`">
+      <article>
+        <h3>Selection {{ selectionId + 1 }}</h3>
+        <p>{{ filmSelection.currentFilms.length }} films</p>
+        <button @click="removeSelection(selectionId)">Delete Section</button>
+        <button @click="editFilters(selectionId)">Edit Filters</button>
+      </article>
+    </li>
+  </transition>
 </template>
 
 <script>
@@ -53,5 +55,19 @@ export default {
       margin-bottom: 2rem;
     }
   }
+}
+/*
+*
+* Selection in/out transitions
+*
+*/
+.selection-enter-active,
+.selection-leave-active {
+  transition: all 0.35s ease-in-out;
+}
+.selection-enter,
+.selection-leave-to {
+  opacity: 0;
+  transform: scale(0.8);
 }
 </style>
