@@ -115,7 +115,7 @@ const films = [
     genres: ['Horror', 'Mad Scientists'],
     producers: ['Eurociné'],
     composers: ['Daniel White'],
-    pseudonyms: [],
+    pseudonyms: ['David Khune'],
     locations: [],
     imdb: 'tt0058563'
   },
@@ -577,7 +577,7 @@ const films = [
     producers: ['Comptoir français du film (Robert de Nesle)', 'Fénix Films'],
     composers: ['Bruno Nicolai', 'Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['David Khune'],
     locations: [],
     trivia: [],
     imdb: 'tt0065660'
@@ -639,7 +639,7 @@ const films = [
     producers: ['Comptoir français du film (Robert de Nesle)', 'Fénix Films'],
     composers: ['Daniel White', 'Jess Franco', 'Jean Bernard Raiteux'],
     screenplay: [],
-    pseudonyms: ['David Khune'],
+    pseudonyms: ['Clifford Brown', 'David Khune'],
     locations: [],
     trivia: [],
     imdb: 'tt0068522'
@@ -653,7 +653,7 @@ const films = [
     producers: ['Comptoir français du film (Robert de Nesle)', 'Fénix Films'],
     composers: ['Bruno Nicolai', 'Jess Franco'],
     screenplay: [],
-    pseudonyms: ['David Khune'],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0069437'
@@ -681,7 +681,7 @@ const films = [
     producers: ['Comptoir français du film (Robert de Nesle)'],
     composers: [],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0068526'
@@ -695,7 +695,7 @@ const films = [
     producers: ['Comptoir français du film (Robert de Nesle)'],
     composers: ['Jean Bernard Raiteux', 'Vladimir Cosma'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0069973'
@@ -723,7 +723,7 @@ const films = [
     producers: [],
     composers: ['Jess Franco'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['David Khune'],
     locations: [],
     trivia: [],
     imdb: 'tt0070471'
@@ -737,7 +737,7 @@ const films = [
     producers: ['Comptoir français du film (Robert de Nesle)'],
     composers: [],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0070543'
@@ -751,7 +751,7 @@ const films = [
     producers: ['Comptoir français du film (Robert de Nesle)'],
     composers: ['Jean Bernard Raiteux'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0069930'
@@ -799,7 +799,7 @@ const films = [
     producers: ['Comptoir français du film (Robert de Nesle)'],
     composers: [],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0297149'
@@ -827,7 +827,7 @@ const films = [
     producers: ['Eurociné'],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['J.P. Johnson'],
     locations: [],
     trivia: [],
     imdb: 'tt0069745'
@@ -855,7 +855,7 @@ const films = [
     producers: ['Eurociné'],
     composers: [],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['J.P. Johnson'],
     locations: [],
     trivia: [],
     imdb: 'tt0221443'
@@ -869,7 +869,7 @@ const films = [
     producers: ['Eurociné'],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['David Khune', 'J.P. Johnson'],
     locations: [],
     trivia: [],
     imdb: 'tt0070779'
@@ -883,7 +883,7 @@ const films = [
     producers: ['Eurociné'],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['David Khune'],
     locations: [],
     trivia: [],
     imdb: 'tt0218380'
@@ -897,7 +897,7 @@ const films = [
     producers: ['Eurociné'],
     composers: [],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['David Khune', 'J.P. Johnson'],
     locations: [],
     trivia: [],
     imdb: 'tt0083155'
@@ -911,7 +911,7 @@ const films = [
     producers: ['Comptoir français du film (Robert de Nesle)'],
     composers: [],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0071294'
@@ -925,7 +925,7 @@ const films = [
     producers: ['Comptoir français du film (Robert de Nesle)'],
     composers: ['Robert de Nesle'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: ['Paco Rabane (costumes)'],
     imdb: 'tt0072019'
@@ -939,7 +939,7 @@ const films = [
     producers: ['Comptoir français du film (Robert de Nesle)'],
     composers: ['Robert de Nesle'],
     screenplay: [],
-    pseudonyms: ['David Khune'],
+    pseudonyms: ['Clifford Brown', 'David Khune'],
     locations: [],
     trivia: [],
     imdb: 'tt0262328'
@@ -953,7 +953,7 @@ const films = [
     producers: ['Comptoir français du film (Robert de Nesle)'],
     composers: [],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0141446'
@@ -967,7 +967,7 @@ const films = [
     producers: ['Comptoir français du film (Robert de Nesle)'],
     composers: [],
     screenplay: [],
-    pseudonyms: ['David Khune'],
+    pseudonyms: ['Clifford Brown', 'David Khune'],
     locations: [],
     trivia: [],
     imdb: 'tt0262395'
@@ -995,7 +995,7 @@ const films = [
     producers: ['Eurociné', 'Erwin C. Dietrich'],
     composers: ['Daniel White', 'Alain Petit'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['David Khune'],
     locations: [],
     trivia: [],
     imdb: 'tt0072793'
@@ -1037,7 +1037,7 @@ const films = [
     producers: ['Erwin C. Dietrich'],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['David Khune'],
     locations: [],
     trivia: [],
     imdb: 'tt0073017'
@@ -1205,7 +1205,7 @@ const films = [
     producers: ['Erwin C. Dietrich'],
     composers: [],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0076312'
@@ -1306,7 +1306,7 @@ const films = [
     producers: ['Comptoir français du film (Robert de Nesle)'],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0140902'
@@ -1320,7 +1320,7 @@ const films = [
     producers: ['Comptoir français du film (Robert de Nesle)'],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0218172'
@@ -1446,7 +1446,7 @@ const films = [
     producers: ['Eurociné'],
     composers: ['Daniel White', 'Jess Franco'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0081973'
@@ -1466,7 +1466,7 @@ const films = [
     imdb: 'tt0082345'
   },
   {
-    title: "Chasseur de l'enfer",
+    title: 'Devil Hunter',
     id: 103,
     year: 1980,
     cast: ['Antonio Mayans'],
@@ -1474,7 +1474,7 @@ const films = [
     producers: ['Eurociné'],
     composers: ['Daniel White', 'Jess Franco'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0080486'
@@ -1647,7 +1647,7 @@ const films = [
     producers: ['Golden Films'],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['David Khune', 'Candy Coaster'],
     locations: [],
     trivia: [],
     imdb: 'tt0085355'
@@ -1703,7 +1703,7 @@ const films = [
     producers: ['Golden Films'],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0084449'
@@ -1731,7 +1731,7 @@ const films = [
     producers: ['Golden Films'],
     composers: ['Daniel White', 'Jess Franco'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['David Khune'],
     locations: [],
     trivia: [],
     imdb: 'tt0089547'
@@ -1745,7 +1745,7 @@ const films = [
     producers: ['Golden Films'],
     composers: ['Daniel White', 'Jess Franco'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0090046'
@@ -1815,7 +1815,7 @@ const films = [
     producers: ['Eurociné'],
     composers: ['Daniel White', 'Jess Franco'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['J.P. Johnson'],
     locations: [],
     trivia: [],
     imdb: 'tt0086428'
@@ -1829,7 +1829,7 @@ const films = [
     producers: ['Golden Films'],
     composers: ['Daniel White', 'Jess Franco'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0087624'
@@ -1857,7 +1857,7 @@ const films = [
     producers: [],
     composers: [],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Candy Coaster'],
     locations: [],
     trivia: [],
     imdb: 'tt0087920'
@@ -1899,7 +1899,7 @@ const films = [
     producers: ['Golden Films'],
     composers: ['Daniel White', 'Jess Franco'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['J.P. Johnson'],
     locations: [],
     trivia: [],
     imdb: 'tt0085487'
@@ -1913,7 +1913,7 @@ const films = [
     producers: ['Golden Films', 'Eurociné'],
     composers: ['Daniel White', 'Jess Franco'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0165621'
@@ -1969,7 +1969,7 @@ const films = [
     producers: [],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0086334'
@@ -1989,7 +1989,7 @@ const films = [
     producers: [],
     composers: ['Daniel White', 'Jess Franco'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0086239'
@@ -2003,7 +2003,7 @@ const films = [
     producers: [],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Lulu Laverne'],
     locations: [],
     trivia: [],
     imdb: 'tt0087976'
@@ -2203,7 +2203,7 @@ const films = [
     producers: [],
     composers: ['Daniel White', 'Jess Franco'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown'],
     locations: [],
     trivia: [],
     imdb: 'tt0089105'
@@ -2231,7 +2231,7 @@ const films = [
     producers: [],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Candy Coaster'],
     locations: [],
     trivia: [],
     imdb: 'tt0186417'
@@ -2245,7 +2245,7 @@ const films = [
     producers: [],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Lulu Laverne'],
     locations: [],
     trivia: [],
     imdb: 'tt0090843'
@@ -2259,7 +2259,7 @@ const films = [
     producers: [],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Lulu Laverne'],
     locations: [],
     trivia: [],
     imdb: 'tt0091010'
@@ -2273,7 +2273,7 @@ const films = [
     producers: [],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Lulu Laverne'],
     locations: [],
     trivia: [],
     imdb: 'tt0091526'
@@ -2287,7 +2287,7 @@ const films = [
     producers: [],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Candy Coaster'],
     locations: [],
     trivia: [],
     imdb: 'tt0090844'
@@ -2301,7 +2301,7 @@ const films = [
     producers: [],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Candy Coaster'],
     locations: [],
     trivia: [],
     imdb: 'tt0091718'
@@ -2315,7 +2315,7 @@ const films = [
     producers: [],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['David Khune', 'J.P. Johnson'],
     locations: [],
     trivia: [],
     imdb: 'tt0092979'
@@ -2371,7 +2371,7 @@ const films = [
     producers: ['Golden Films', 'Eurociné'],
     composers: [],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['David Khune'],
     locations: [],
     trivia: ['Unfinished/Unreleased'],
     imdb: 'tt0435392'
@@ -2385,7 +2385,7 @@ const films = [
     producers: [],
     composers: ['Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Lulu Laverne'],
     locations: [],
     trivia: [],
     imdb: 'tt0093732'
@@ -2497,7 +2497,7 @@ const films = [
     producers: [],
     composers: ['Daniel White', 'Jess Franco'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['David Khune'],
     locations: [],
     trivia: [],
     imdb: 'tt0116769'
@@ -2581,7 +2581,7 @@ const films = [
     producers: ['One Shot Productions'],
     composers: ['Jess Franco'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown', 'David Khune'],
     locations: [],
     trivia: [],
     imdb: 'tt0274041'
@@ -2595,7 +2595,7 @@ const films = [
     producers: ['One Shot Productions'],
     composers: ['Jess Franco', 'Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['David Khune'],
     locations: [],
     trivia: [],
     imdb: 'tt0273133'
@@ -2609,7 +2609,7 @@ const films = [
     producers: ['One Shot Productions'],
     composers: ['Jess Franco', 'Daniel White'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['David Khune'],
     locations: [],
     trivia: [],
     imdb: 'tt0260758'
@@ -2623,7 +2623,7 @@ const films = [
     producers: ['One Shot Productions'],
     composers: ['Jess Franco', 'Daniel White', 'Alain Petit'],
     screenplay: [],
-    pseudonyms: [],
+    pseudonyms: ['Clifford Brown', 'David Khune'],
     locations: [],
     trivia: [],
     imdb: 'tt0273259'
