@@ -5,7 +5,7 @@
       <SiteLogo class="hero__logo" />
       <p class="hero__description">
         An <br class="mobile-only" />Experiment <br class="mobile-only" />in
-        <br class="mobile-only" />Data <br class="mobile-only" />Visualisation
+        <br class="mobile-only" />Data <br class="mobile-only" />Visualization
       </p>
       <ul class="hero__hook">
         <li>Psychedelic Sadism</li>
